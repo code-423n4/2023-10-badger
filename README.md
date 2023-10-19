@@ -57,22 +57,21 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Sponsorname audit details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - Analysis awards: XXX XXX USDC (Notion: Analysis pool)
-  - QA awards: XXX XXX USDC (Notion: QA pool)
-  - Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
-  - Gas awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this audit.*)
+# BadgerDAO eBTC audit details
+- Total Prize Pool: XXX XXX USDC 
+  - HM awards: XXX XXX USDC 
+  - Analysis awards: XXX XXX USDC 
+  - QA awards: XXX XXX USDC 
+  - Bot Race awards: XXX XXX USDC 
+  - Gas awards: XXX XXX USDC 
+  - Judge awards: XXX XXX USDC 
+  - Lookout awards: XXX XXX USDC 
+  - Scout awards: $500 USDC 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-AuditName/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts October 24, 2023 20:00 UTC 
+- Ends November 14, 2023 20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
@@ -140,18 +139,18 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:
-- Is this an upgrade of an existing system?:
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
+- How many contracts are in scope?:   6
+- Total SLoC for these contracts?:  1999
+- How many external imports are there?: 0 
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  13
+- Does most of your code generally use composition or inheritance?:   Composition
+- How many external calls?:   0
+- What is the overall line coverage percentage provided by your tests?: 80
+- Is this an upgrade of an existing system?:  False
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20 Token
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  False 
+- Please describe required context:   n/a
+- Does it use an oracle?:  Chainlink
 - Describe any novel or unique curve logic or mathematical models your code uses: 
 - Is this either a fork of or an alternate implementation of another project?:   
 - Does it use a side-chain?:
