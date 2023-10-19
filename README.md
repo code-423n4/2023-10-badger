@@ -42,18 +42,23 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# BadgerDAO eBTC audit details
-- Total Prize Pool: XXX XXX USDC 
-  - HM awards: XXX XXX USDC 
-  - Analysis awards: XXX XXX USDC 
-  - QA awards: XXX XXX USDC 
-  - Bot Race awards: XXX XXX USDC 
-  - Gas awards: XXX XXX USDC 
-  - Judge awards: XXX XXX USDC 
-  - Lookout awards: XXX XXX USDC 
-  - Scout awards: $500 USDC 
+# Badger eBTC Audit + Certora Formal Verification details
+- Total Audit + Formal Verification Prize Pool: $149,725 USDC
+
+- Total Audit Prize Pool: $119,725 USDC 
+  - HM awards: $100,000 USDC 
+  - QA awards:  $2,112.50 USDC  
+  - Gas awards:  $2,112.50 USDC 
+  - Judge awards: $9,000 USDC 
+  - Lookout awards: $6,000 USDC 
+  - Scout awards: $500 USDC
+ 
+ - Total FV Prize Pool: $30,000 USDC 
+  - Real Bug Rules: $7,500 USDC 
+  - Mutation Rules $19,500 USDC 
+  - Participation: $3,000 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger-Audit-+-Certora-Formal-Verification/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts October 24, 2023 20:00 UTC 
 - Ends November 14, 2023 20:00 UTC 
