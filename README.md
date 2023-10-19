@@ -52,8 +52,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
   - Judge awards: $9,000 USDC 
   - Lookout awards: $6,000 USDC 
   - Scout awards: $500 USDC
- 
- - Total FV Prize Pool: $30,000 USDC 
+- Total FV Prize Pool: $30,000 USDC 
   - Real Bug Rules: $7,500 USDC 
   - Mutation Rules $19,500 USDC 
   - Participation: $3,000 USDC
