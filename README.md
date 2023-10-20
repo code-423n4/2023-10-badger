@@ -12,19 +12,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 48 business hours prior to audit start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the audit — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the audit. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-
----
-
 ## ⭐️ Sponsor: Edit this `README.md` file
 
 - [ ] Modify the contents of this `README.md` file. Describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
@@ -78,13 +65,20 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 [ ⭐️ SPONSORS: add info here ]
 
 ## Links
-
+[Primary Readme](./README_EBTC.md) contains further links.
 - **Previous audits:** 
+All findings contained in theses reports:
+- RiskDAO: https://github.com/Risk-DAO/Reports/blob/main/eBTC.pdf
+- Trust: https://badger.com/images/uploads/trust-ebtc-audit-report.pdf
+- Spearbit: https://badger.com/images/uploads/ebtc-security-review-spearbit.pdf
+- Cantina: https://badger.com/images/uploads/ebtc-security-review-cantina.pdf
 - **Documentation:**
+[Primary Readme](./README_EBTC.md)
 - **Website:**
+[ebtc.finance](https://www.ebtc.finance/)
 - **Twitter:** 
+[eBTCProtocol](https://twitter.com/eBTCprotocol)
 - **Discord:** 
-
 
 # Scope
 
@@ -97,22 +91,77 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 
 *List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
-| Contract | SLOC | Purpose | Libraries used |  
-| ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+|File|SLOC|Description|
+:-|:-:|:-|
+|_Core Protocol Contracts (10)_|
+|[/packages/contracts/contracts/ActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/ActivePool.sol)|221|Manages system-level internal accounting and stETH tokens.|
+|[/packages/contracts/contracts/BorrowerOperations.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/BorrowerOperations.sol)|751|Entry point to Open, Adjust, and Close Cdps as well as delegate positionManagers.|
+|[/packages/contracts/contracts/CdpManager.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CdpManager.sol)|578|Cdp operations and entry point for non-borrower operations on Cdps (Liquidations, Redemptions).|
+|[/packages/contracts/contracts/LiquidationLibrary.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/AAALiquidationLibrary.sol)|700|Contains liquidation-related functions. Split off due to maximum contract size, delegateCalled by CdpManager.|
+|[/packages/contracts/contracts/CdpManagerStorage.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CdpManagerStorage.sol)|550|Shared storage variables between CdpManager and Liquidation Library, and common functions.|
+|[/packages/contracts/contracts/CollSurplusPool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CollSurplusPool.sol)|83|Isolated storage of excess collateral owed to users from liquidations or redemptions. Not considered part of system for accounting.|
+|[/packages/contracts/contracts/EBTCToken.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/EBTCToken.sol)|223|ERC20 EbtcToken, with permit approvals and extensible minting.|
+|[/packages/contracts/contracts/Governor.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Governor.sol)|107|Roles-based authorization contract, adapted and expanded from solmate Authority. Expanded with more convenience view functions and ability to permanently burn capabilities.|
+|[/packages/contracts/contracts/PriceFeed.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/PriceFeed.sol)|491|PriceFeed with primary and secondary oracles and state machine to switch between them and handle failure cases.|
+|[/packages/contracts/contracts/SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/AAASortedCdps.sol)|399|Data storage for the doubly-linked list of Cdps. Sorting of Cdps is used to enforce redemptions from lowest ICR to highest ICR.|
+|_Lens / Helper Contracts (2)_|
+|[/packages/contracts/contracts/HintHelpers.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/HintHelpers.sol)|142|Generate approximate locations for proper linked list insertion locations for Cdps.|
+|[/packages/contracts/contracts/CRLens.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CRLens.sol)|98|Simulate state changes and view results, to compare to expected results in testing env.|
+|_Leverage Macros & Smart Wallets (5)_|
+|[/packages/contracts/contracts/LeverageMacroBase.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroBase.sol)|353|Common base implementation of the LeverageMacro.|
+|[/packages/contracts/contracts/LeverageMacroDelegateTarget.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroDelegateTarget.sol)|30|LeverageMacro variant for use with delegateCall with compatible smart wallets.|
+|[/packages/contracts/contracts/LeverageMacroFactory.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroFactory.sol)|46|Factory for deploying LeverageMacroReference|
+|[/packages/contracts/contracts/LeverageMacroReference.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroReference.sol)|38|LeverageMacro variant for use as a zap with an individual owner.|
+|[/packages/contracts/contracts/SimplifiedDiamondLike.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/SimplifiedDiamondLike.sol)|109|Smart wallet with custom callback handler support.|
+|_Modified Dependencies (7)_|
+|[/packages/contracts/contracts/Dependencies/Auth.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/Auth.sol)|33|Inherited by contracts consuming authorization rules of Governor.|
+|[/packages/contracts/contracts/Dependencies/AuthNoOwner.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/AuthNoOwner.sol)|36|Inherited by contracts consuming authorization rules of Governor. Removes owner address that has global 'admin' permission from Auth.|
+|[/packages/contracts/contracts/Dependencies/ERC3156FlashLender.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/ERC3156FlashLender.sol)|10|Base for standardized flash loans|
+|[/packages/contracts/contracts/Dependencies/EbtcBase.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/EbtcBase.sol)|78|Common definition and base functions for system contracts.|
+|[/packages/contracts/contracts/Dependencies/EbtcMath.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/EbtcMath.sol)|62|More common math functions for system contracts.|
+|[/packages/contracts/contracts/Dependencies/ReentrancyGuard.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/ReentrancyGuard.sol)|12|Simple, optimized reentrancy guard.|
+|[/packages/contracts/contracts/Dependencies/RolesAuthority.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/RolesAuthority.sol)|102|Role-based authorization from solmate. Expanded functionality for use with Governor.|
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+All other contracts in the repo.
 
 # Additional Context
 
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
+- Describe any novel or unique curve logic or mathematical models implemented in the contracts.
+
+None.
+
 - [ ] Please list specific ERC20 that your protocol is anticipated to interact with. Could be "any" (literally anything, fee on transfer tokens, ERC777 tokens and so forth) or a list of tokens you envision using on launch.
+
+ONLY stETH, eBTC token
+
 - [ ] Please list specific ERC721 that your protocol is anticipated to interact with.
+
+none
+
 - [ ] Which blockchains will this code be deployed to, and are considered in scope for this audit?
+
+Ethereum mainnet
+
 - [ ] Please list all trusted roles (e.g. operators, slashers, pausers, etc.), the privileges they hold, and any conditions under which privilege escalation is expected/allowable
+
+All governable permissions can be assumed to be managed by a multisig + timelock configuration.
+
+ActivePool
+```
+sweepToken
+```
+
+CollSurplusPool
+```
+sweepToken
+```
+
+
+
 - [ ] In the event of a DOS, could you outline a minimum duration after which you would consider a finding to be valid? This question is asked in the context of most systems' capacity to handle DoS attacks gracefully for a certain period.
+
 - [ ] Is any part of your implementation intended to conform to any EIP's? If yes, please list the contracts in this format: 
   - `Contract1`: Should comply with `ERC/EIPX`
   - `Contract2`: Should comply with `ERC/EIPY`
@@ -121,33 +170,41 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 *List specific areas to address - see [this blog post](https://medium.com/code4rena/the-security-council-elections-within-the-arbitrum-dao-a-comprehensive-guide-aa6d001aae60#9adb) for an example*
 
 ## Main invariants
-*Describe the project's main invariants (properties that should NEVER EVER be broken).*
+[PROPERTIES.md](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PROPERTIES.md) file.
 
 ## Scoping Details 
-[ ⭐️ SPONSORS: please confirm/edit the information below. ]
 
 ```
-- If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   6
-- Total SLoC for these contracts?:  1999
-- How many external imports are there?: 0 
+- If you have a public code repo, please share it here:  https://github.com/ebtc-protocol/ebtc
+- How many contracts are in scope?:   24
+- Total SLoC for these contracts?:  5252
+- How many external imports are there?: 3 
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  13
-- Does most of your code generally use composition or inheritance?:   Composition
-- How many external calls?:   0
+- Does most of your code generally use composition or inheritance?:   Inheritance
+- How many external calls?: 0
 - What is the overall line coverage percentage provided by your tests?: 80
 - Is this an upgrade of an existing system?:  False
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20 Token
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  False 
 - Please describe required context:   n/a
 - Does it use an oracle?:  Chainlink
-- Describe any novel or unique curve logic or mathematical models your code uses: 
-- Is this either a fork of or an alternate implementation of another project?:   
-- Does it use a side-chain?:
-- Describe any specific areas you would like addressed:
+- Describe any novel or unique curve logic or mathematical models your code uses:  no
+- Is this either a fork of or an alternate implementation of another project?:  Liquity
+- Does it use a side-chain?: no
+- Describe any specific areas you would like addressed: accounting / accrural math
 ```
 
 # Tests
+Fresh build / run / test
+```
+yarn
+cd packages/contracts
+forge build 
+forge test
+yarn test
+```
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
-
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+Gas report
+```
+forge test --gas-report
+```
