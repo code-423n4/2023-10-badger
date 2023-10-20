@@ -1,0 +1,64 @@
+{
+  "name": "@ebtc/contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "workspaces": {
+    "nohoist": [
+      "**/@openzeppelin",
+      "**/@openzeppelin/**"
+    ]
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "hardhat": "hardhat",
+    "prepare": "run-s prepare:*",
+    "prepare:clean-compile": "hardhat clean && hardhat compile",
+    "prepare:compile": "hardhat compile",
+    "prepare:set-version": "node scripts/set-version.js",
+    "test": "hardhat test --show-stack-traces",
+    "echidna": "echidna contracts/TestContracts/invariants/echidna/EchidnaTester.sol --contract EchidnaTester --config fuzzTests/echidna_config.yaml --corpus-dir ../../echidna",
+    "medusa": "medusa fuzz --no-color --corpus-dir ../../medusa",
+    "echidna-fork": "export ECHIDNA_RPC_BLOCK=4368824 && export ECHIDNA_RPC_URL=http://127.0.0.1:8545 && echidna contracts/TestContracts/invariants/echidna/EchidnaForkTester.sol --contract EchidnaForkTester --config fuzzTests/echidna_config.yaml --corpus-dir ../../echidna",
+    "echidna-collateral-token-tester": "echidna contracts/TestContracts/invariants/echidna/EchidnaCollateralTokenTester.sol --test-mode assertion --contract EchidnaCollateralTokenTester --config fuzzTests/echidna_config.yaml --corpus-dir ../../echidna-collateral-token-tester",
+    "echidna-price-feed": "echidna contracts/TestContracts/invariants/echidna/EchidnaPriceFeedTester.sol --test-mode assertion --contract EchidnaPriceFeedTester --config fuzzTests/echidna_config.yaml --corpus-dir ../../echidna-price-feed",
+    "coverage": "hardhat coverage",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "local-fork": "hardhat --config hardhat.config.mainnet-fork.js node --network hardhat --show-stack-traces",
+    "local-fork-deployment": "hardhat run mainnetDeployment/mainnetLocalForkDeployment.js --network localhost",
+    "testnet-fork-deployment": "hardhat run mainnetDeployment/testnetLocalForkDeployment.js --network localhost",
+    "deploy-local": "hardhat run mainnetDeployment/eBTCDeployScript.js --network localhost",
+    "deploy-testnet": "hardhat run mainnetDeployment/eBTCDeployScript.js --network sepolia"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "decimal.js": "^10.2.0",
+    "eth-mutants": "^0.1.1",
+    "ethereumjs-util": "^7.0.9",
+    "ethers": "^5.4.3",
+    "solc": "^0.6.11",
+    "solhint": "^3.3.7",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "@crytic/properties": "https://github.com/crytic/properties.git",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-truffle5": "^2.0.7",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^3.3.0",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "eth-gas-reporter": "^0.2.22",
+    "hardhat": "^2.12.2",
+    "hardhat-contract-sizer": "^2.6.1",
+    "hardhat-gas-reporter": "^1.0.1",
+    "npm-run-all": "^4.1.5",
+    "solidity-coverage": "^0.8.2",
+    "web3": "^1.3.4"
+  }
+}

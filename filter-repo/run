@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+# Disable paging for git status, git log, etc.
+export GIT_PAGER=
+
+[ -d output ] || (
+  mkdir output
+  cd output
+  git init
+)
+
+git filter-repo --paths-from-file 1-included-paths --refs master --target output
+
+cd output
+git filter-repo --paths-from-file ../2-excluded-paths --invert-paths
+
+# Set up origin and tracking information for pushing to the public repo
+git remote add origin git@github.com:liquity/liquity.git
+git fetch
+git branch -u origin/master
+
+echo
+git status
+
+echo
+git log --oneline --graph master origin/master $(git merge-base master origin/master)^!
