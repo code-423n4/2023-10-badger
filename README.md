@@ -1,33 +1,4 @@
-# ✨ So you want to run an audit
 
-This `README.md` contains a set of checklists for our audit collaboration.
-
-Your audit will use two repos: 
-- **an _audit_ repo** (this one), which is used for scoping your audit and for providing information to wardens
-- **a _findings_ repo**, where issues are submitted (shared with you after the audit) 
-
-Ultimately, when we launch the audit, this repo will be made public and will contain the smart contracts to be reviewed and all the information needed for audit participants. The findings repo will be made public after the audit report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the audit sponsor (⭐️)**.
-
----
-
-## ⭐️ Sponsor: Edit this `README.md` file
-
-- [ ] Modify the contents of this `README.md` file. Describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-- [ ] Review the Gas award pool amount. This can be adjusted up or down, based on your preference - just flag it for Code4rena staff so we can update the pool totals across all comms channels.
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] [This checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746) provides some best practices for Code4rena audits.
-
-## ⭐️ Sponsor: Final touches
-- [ ] Review and confirm the details in the section titled "Scoping details" and alert Code4rena staff of any changes.
-- [ ] Check that images and other files used in this README have been uploaded to the repo as a file and then linked in the README using absolute path (e.g. `https://github.com/code-423n4/yourrepo-url/filepath.png`)
-- [ ] Ensure that *all* links and image/file paths in this README use absolute paths, not relative paths
-- [ ] Check that all README information is in markdown format (HTML does not render on Code4rena.com)
-- [ ] Remove any part of this template that's not relevant to the final version of the README (e.g. instructions in brackets and italic)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
 
 # Badger eBTC Audit + Certora Formal Verification details
 - Total Audit + Formal Verification Prize Pool: $149,725 USDC
@@ -63,11 +34,13 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 
 TBD Analyzer by Staff
 
-
-
 # Overview
+eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and built on the Ethereum network. It is backed exclusively by Staked Ether (stETH) and powered by immutable smart contracts with minimized counterparty reliance. It’s designed to be the most decentralized synthetic BTC in DeFi and offers the ability for anyone in the world to borrow BTC at no cost.
 
-[ ⭐️ SPONSORS: add info here ]
+- See [Primary Readme](./README_EBTC.md).
+- See [Intro Video](https://www.youtube.com/watch?v=QWIB4avTkt4).
+- See the [eBTC Cheatsheet](https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6) for additional videos and an up to date list of additional resources.
+
 
 ## Links
 [Primary Readme](./README_EBTC.md) contains further links.
@@ -84,18 +57,9 @@ All findings contained in theses reports:
 [ebtc.finance](https://www.ebtc.finance/)
 - **Twitter:** 
 [eBTCProtocol](https://twitter.com/eBTCprotocol)
-- **Discord:** 
+
 
 # Scope
-
-[ ⭐️ SPONSORS: add scoping and technical details here ]
-
-- [ ] In the table format shown below, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
 |File|SLOC|Description|
 :-|:-:|:-|
@@ -251,10 +215,11 @@ setRedemptionsPaused
   - `EBTCToken`: Should comply with `ERC20, ERC2612`
 
 ## Attack ideas (Where to look for bugs)
-See Known Issues section and rrevious audit reports.
+See [Known Issues](./README_EBTC.md#known-issues) section and previous audit reports.
 
 ## Main invariants
-[PROPERTIES.md](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PROPERTIES.md) file.
+- [PROPERTIES.md](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PROPERTIES.md) file contains the main invariants.
+- Also see [Price Feed](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PriceFeed.tree) state machine for reference.
 
 ## Scoping Details 
 
