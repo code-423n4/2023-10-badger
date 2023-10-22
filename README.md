@@ -53,11 +53,16 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 The 4naly3er report can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/4naly3er-report.md).
 
-Automated findings output for the audit can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/bot-report.md) within 24 hours of audit opening.
+[Badger provided 4 previous audit reports and known issues](https://gist.github.com/GalloDaSballo/a0f9766bf7bac391f49d2d167e947de0)
+
+Automated findings output for the audit can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/bot-report.md) and within 24 hours of audit opening.
 
 _Note for C4 wardens: Anything included in the 4naly3er **or** the automated findings output is considered a publicly known issue and is ineligible for awards._
 
 [ ⭐️ SPONSORS: Are there any known issues or risks deemed acceptable that shouldn't lead to a valid finding? If so, list them here. ]
+
+TBD Analyzer by Staff
+
 
 
 # Overview
