@@ -28,18 +28,11 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 _Note for C4 wardens: Anything included in the 4naly3er **or** the automated findings output is considered a publicly known issue and is ineligible for awards._
 
-[ ⭐️ SPONSORS: Are there any known issues or risks deemed acceptable that shouldn't lead to a valid finding? If so, list them here. ]
-
-TBD Analyzer by Staff
-
-
 
 # Overview
 
-[ ⭐️ SPONSORS: add info here ]
-
 ## Links
-[Primary Readme](./README_EBTC.md) contains further links.
+[Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md) contains further links.
 - **Previous audits:** 
 All findings contained in theses reports:
 - RiskDAO: https://github.com/Risk-DAO/Reports/blob/main/eBTC.pdf
@@ -48,7 +41,7 @@ All findings contained in theses reports:
 - Cantina: https://badger.com/images/uploads/ebtc-security-review-cantina.pdf
 - Many additional links (cheatsheet): https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
 - **Documentation:**
-[Primary Readme](./README_EBTC.md)
+[Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md)
 - **Website:**
 [ebtc.finance](https://www.ebtc.finance/)
 - **Twitter:** 
