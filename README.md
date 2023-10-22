@@ -13,7 +13,7 @@
   - Mutation Rules $19,500 USDC 
   - Participation: $3,000 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger-Audit-+-Certora-Formal-Verification/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger-ebtc-audit-certora-formal-verification-competition/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts October 24, 2023 20:00 UTC 
 - Ends November 14, 2023 20:00 UTC 
