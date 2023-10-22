@@ -77,6 +77,7 @@ All findings contained in theses reports:
 - Trust: https://badger.com/images/uploads/trust-ebtc-audit-report.pdf
 - Spearbit: https://badger.com/images/uploads/ebtc-security-review-spearbit.pdf
 - Cantina: https://badger.com/images/uploads/ebtc-security-review-cantina.pdf
+- Many additional links (cheatsheet): https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
 - **Documentation:**
 [Primary Readme](./README_EBTC.md)
 - **Website:**
