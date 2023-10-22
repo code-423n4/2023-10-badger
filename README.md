@@ -1,5 +1,3 @@
-
-
 # Badger eBTC Audit + Certora Formal Verification details
 - Total Audit + Formal Verification Prize Pool: $149,725 USDC
 
@@ -15,24 +13,21 @@
   - Mutation Rules $19,500 USDC 
   - Participation: $3,000 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger-Audit-+-Certora-Formal-Verification/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger-ebtc-audit-certora-formal-verification-competition/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts October 24, 2023 20:00 UTC 
 - Ends November 14, 2023 20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
-The 4naly3er report can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/4naly3er-report.md).
+The 4naly3er report can be found [here](https://github.com/code-423n4/2023-10-badger/blob/main/4naly3er-report.md).
 
 [Badger provided 4 previous audit reports and known issues](https://gist.github.com/GalloDaSballo/a0f9766bf7bac391f49d2d167e947de0)
 
-Automated findings output for the audit can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/bot-report.md) and within 24 hours of audit opening.
+Automated findings output for the audit can be found [here](https://github.com/code-423n4/2023-10-badger/blob/main/bot-report.md) and within 24 hours of audit opening.
 
 _Note for C4 wardens: Anything included in the 4naly3er **or** the automated findings output is considered a publicly known issue and is ineligible for awards._
 
-[ ⭐️ SPONSORS: Are there any known issues or risks deemed acceptable that shouldn't lead to a valid finding? If so, list them here. ]
-
-TBD Analyzer by Staff
 
 # Overview
 eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and built on the Ethereum network. It is backed exclusively by Staked Ether (stETH) and powered by immutable smart contracts with minimized counterparty reliance. It’s designed to be the most decentralized synthetic BTC in DeFi and offers the ability for anyone in the world to borrow BTC at no cost.
@@ -41,9 +36,8 @@ eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and bu
 - See [Intro Video](https://www.youtube.com/watch?v=QWIB4avTkt4).
 - See the [eBTC Cheatsheet](https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6) for additional videos and an up to date list of additional resources.
 
-
 ## Links
-[Primary Readme](./README_EBTC.md) contains further links.
+[Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md) contains further links.
 - **Previous audits:** 
 All findings contained in theses reports:
 - RiskDAO: https://github.com/Risk-DAO/Reports/blob/main/eBTC.pdf
@@ -52,7 +46,7 @@ All findings contained in theses reports:
 - Cantina: https://badger.com/images/uploads/ebtc-security-review-cantina.pdf
 - Many additional links (cheatsheet): https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
 - **Documentation:**
-[Primary Readme](./README_EBTC.md)
+[Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md)
 - **Website:**
 [ebtc.finance](https://www.ebtc.finance/)
 - **Twitter:** 
