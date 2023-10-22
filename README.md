@@ -121,6 +121,23 @@ All findings contained in theses reports:
 |[/packages/contracts/contracts/Dependencies/EbtcMath.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/EbtcMath.sol)|62|More common math functions for system contracts.|
 |[/packages/contracts/contracts/Dependencies/ReentrancyGuard.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/ReentrancyGuard.sol)|12|Simple, optimized reentrancy guard.|
 |[/packages/contracts/contracts/Dependencies/RolesAuthority.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/RolesAuthority.sol)|102|Role-based authorization from solmate. Expanded functionality for use with Governor.|
+|_Core Interface (17)_|
+|[/packages/contracts/contracts/Interfaces/IActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IActivePool.sol)|28|ActivePool interface|
+|[/packages/contracts/contracts/Interfaces/IBorrowerOperations.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IBorrowerOperations.sol)|68|BorrowerOperations primary interface|
+|[/packages/contracts/contracts/Interfaces/ICdpManager.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/ICdpManager.sol)|52|CdpManager primary interface|
+|[/packages/contracts/contracts/Interfaces/ICdpManagerData.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/ICdpManagerData.sol)|213|CdpManagerStorage interface. Contains structs, events, and common functions between CdpManager and LiquidationLibrary|
+|[/packages/contracts/contracts/Interfaces/ICollSurplusPool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/ICollSurplusPool.sol)|11|CollSurplusPool interface|
+|[/packages/contracts/contracts/Interfaces/IEbtcBase.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IEbtcBase.sol)|5|EbtcBase interface.|
+|[/packages/contracts/contracts/Interfaces/IEBTCToken.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IEBTCToken.sol)|7|EBTCToken interface, expands IERC20 and IERC2612|
+|[/packages/contracts/contracts/Interfaces/IERC3156FlashBorrower.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IERC3156FlashBorrower.sol)|10|ERC3156FlashBorrower interface for recipients of flashLoans|
+|[/packages/contracts/contracts/Interfaces/IERC3156FlashLender.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IERC3156FlashLender.sol)|15|ERC3156FlashLender interface for flash lenders, BorrowerOperations and ActivePool|
+|[/packages/contracts/contracts/Interfaces/IFallbackCaller.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IFallbackCaller.sol)|7|Standardized interface for fallback oracles|
+|[/packages/contracts/contracts/Interfaces/IPermitNonce.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IPermitNonce.sol)|5|Interface for managing permit nonces|
+|[/packages/contracts/contracts/Interfaces/IPool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IPool.sol)|10|Common interface for Pool contracts. Only consumed by IActivePool due to pool consolidation|
+|[/packages/contracts/contracts/Interfaces/IPositionManagers.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IPositionManagers.sol)|35|Interface for PositionManager functions. Consumed by BorrowerOperations|
+|[/packages/contracts/contracts/Interfaces/IPriceFeed.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IPriceFeed.sol)|31|PriceFeed interface|
+|[/packages/contracts/contracts/Interfaces/IRecoveryModeGracePeriod.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IRecoveryModeGracePeriod.sol)|9|Interface for GracePeriod functions. Consumed by CdpManager|
+|[/packages/contracts/contracts/Interfaces/ISortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/ISortedCdps.sol)|54|SortedCdps interface|
 
 ## Out of scope
 
@@ -129,45 +146,98 @@ All other contracts in the repo.
 # Additional Context
 
 - Describe any novel or unique curve logic or mathematical models implemented in the contracts.
+  - None.
+- Please list specific ERC20 that your protocol is anticipated to interact with. Could be "any" (literally anything, fee on transfer tokens, ERC777 tokens and so forth) or a list of tokens you envision using on launch.
+  - ONLY stETH, eBTC token
+- Please list specific ERC721 that your protocol is anticipated to interact with.
+  - none
+- Which blockchains will this code be deployed to, and are considered in scope for this audit?
+  - Ethereum mainnet
+- Please list all trusted roles (e.g. operators, slashers, pausers, etc.), the privileges they hold, and any conditions under which privilege escalation is expected/allowable
 
-None.
+All governable permissions can be assumed to be managed by a multisig + timelock configuration by default. 
+Some functions will be callable my a smaller threshold of users with no timelocks to prioritize speed.
 
-- [ ] Please list specific ERC20 that your protocol is anticipated to interact with. Could be "any" (literally anything, fee on transfer tokens, ERC777 tokens and so forth) or a list of tokens you envision using on launch.
+### Governable Function
 
-ONLY stETH, eBTC token
+#### ActivePool
+```
+claimFeeRecipientCollShares
+sweepToken
+setFeeRecipientAddress
+setFeeBps
+setFlashLoansPaused
+```
 
-- [ ] Please list specific ERC721 that your protocol is anticipated to interact with.
-
-none
-
-- [ ] Which blockchains will this code be deployed to, and are considered in scope for this audit?
-
-Ethereum mainnet
-
-- [ ] Please list all trusted roles (e.g. operators, slashers, pausers, etc.), the privileges they hold, and any conditions under which privilege escalation is expected/allowable
-
-All governable permissions can be assumed to be managed by a multisig + timelock configuration.
-
-ActivePool
+#### CollSurplusPool
 ```
 sweepToken
 ```
 
-CollSurplusPool
+#### BorrowerOperations
+```
+setFeeRecipientAddress
+setFeeBps
+setFlashLoansPaused
+```
+
+#### CdpManager
+```
+setGracePeriod
+setStakingRewardSplit
+setRedemptionFeeFloor
+setMinuteDecayFactor
+setBeta
+setRedemptionsPaused
+```
+
+#### EBTCToken
+```
+mint
+burn
+(both variants of each)
+```
+
+#### PriceFeed
+```
+setFallbackCaller
+```
+
+The following functions can be assumed to be exemptions from a timelock due to impact on operational efficiency and ability to respond to emergency scenarios.
+See Known Issues for our stance on governance parameters.
+
+#### ActivePool
+```
+claimFeeRecipientCollShares
+sweepToken
+setFlashLoansPaused
+```
+
+#### CollSurplusPool
 ```
 sweepToken
 ```
 
+#### BorrowerOperations
+```
+setFlashLoansPaused
+```
 
+#### CdpManager
+```
+setRedemptionsPaused
+```
 
+#### DOS Minimum Duration
 - [ ] In the event of a DOS, could you outline a minimum duration after which you would consider a finding to be valid? This question is asked in the context of most systems' capacity to handle DoS attacks gracefully for a certain period.
 
-- [ ] Is any part of your implementation intended to conform to any EIP's? If yes, please list the contracts in this format: 
-  - `Contract1`: Should comply with `ERC/EIPX`
-  - `Contract2`: Should comply with `ERC/EIPY`
+#### EIP Compliance
+  - `ActivePool`: Should comply with `EIP3156`
+  - `BorrowerOperations`: Should comply with `EIP3156`
+  - `EBTCToken`: Should comply with `ERC20, ERC2612`
 
 ## Attack ideas (Where to look for bugs)
-*List specific areas to address - see [this blog post](https://medium.com/code4rena/the-security-council-elections-within-the-arbitrum-dao-a-comprehensive-guide-aa6d001aae60#9adb) for an example*
+See Known Issues section and rrevious audit reports.
 
 ## Main invariants
 [PROPERTIES.md](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PROPERTIES.md) file.
@@ -176,22 +246,21 @@ sweepToken
 
 ```
 - If you have a public code repo, please share it here:  https://github.com/ebtc-protocol/ebtc
-- How many contracts are in scope?:   24
-- Total SLoC for these contracts?:  5252
-- How many external imports are there?: 3 
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  13
+- How many contracts are in scope?:   41
+- Total SLoC for these contracts?:  5805
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  17 Interfaces, 16 Structs
 - Does most of your code generally use composition or inheritance?:   Inheritance
-- How many external calls?: 0
-- What is the overall line coverage percentage provided by your tests?: 80
+- How many external calls?: 6 seperate calls (to stETH token and Chainlink)
+- What is the overall line coverage percentage provided by your tests?: 99%
 - Is this an upgrade of an existing system?:  False
 - Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  False 
 - Please describe required context:   n/a
-- Does it use an oracle?:  Chainlink
-- Describe any novel or unique curve logic or mathematical models your code uses:  no
+- Does it use an oracle?:  Chainlink with potential to connect an arbitrary backup oracle.
+- Describe any novel or unique curve logic or mathematical models your code uses:  No
 - Is this either a fork of or an alternate implementation of another project?:  Liquity
-- Does it use a side-chain?: no
-- Describe any specific areas you would like addressed: accounting / accrural math
+- Does it use a side-chain?: No
+- Describe any specific areas you would like addressed: Accounting / yield accrural math
 ```
 
 # Tests
