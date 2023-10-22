@@ -75,10 +75,7 @@ They can always retrieve the funds
 | GENERAL-03 | CdpManager and BorrowerOperations do not hold value terms of stETH and eBTC unless there are donations | Valid States | ✅ |
 | GENERAL-05 | At all times, the total stETH shares of the system exceeds the deposits if there is no negative rebasing events | High Level |  |
 | GENERAL-06 | At all times, the total debt is greater than the sum of all debts from all CDPs | High Level | ✅ |
-
-| GENERAL-07 | Without a price change, a rebasing event, or a redistribution, my position can never reduce in absolute value | State Transitions | | - TODO: 
-Recon Attack IMO
-
+| GENERAL-07 | Without a price change, a rebasing event, or a redistribution, my position can never reduce in absolute value | State Transitions | | 
 | GENERAL-08 | At all times TCR = SUM(ICR) for all CDPs | High Level | ✅ |
 | GENERAL-09 | After any operation, the ICR of a CDP must be above the MCR in Normal Mode, and after debt increase in Recovery Mode the ICR must be above the CCR | High Level | ✅ |
 | GENERAL-10 | All CDPs should maintain a minimum collateral size | High Level | ✅ |
@@ -90,6 +87,7 @@ Recon Attack IMO
 
 
 ## Liquidation Sequencer vs Syncing Liquidation Sequencer
+| Property | Description | Category | Tested |
 | --- | --- | --- | --- |
 | LS-01 | The Liquidation Sequencer produces the same output as the SyncedLiquidationSequencer | Unit Tests | ✅ |
 
@@ -98,25 +96,12 @@ Recon Attack IMO
 | Property | Description | Category | Tested |
 | --- | --- | --- | --- |
 | R-01 | When a user redeems eBTC, it is exchanged for stETH, at face value (minus a redemption fee) | Unit Tests | |
--> TODO: Code
-
 | R-02 | When eBTC is redeemed for stETH, the system cancels the eBTC with debt from CDPs, and the stETH is drawn from their collateral in exact amounts (totalDebt Decrease is equal to TS decrease). The debt reduction is pro-rata to all CDPs open based on their size | Unit Tests | |
--> TODO: Code
-
 | R-03 | A redemption sequence of n steps will fully redeem from up to n-1 CDPs, and, and partially redeems from up to 1 CDP, which is always the last CDP in the redemption sequence. | Unit Tests | |
--> TODO: Code with supporting contract prob
-
-| R-04 | Redemptions are disabled during the first 14 days of operation since deployment of the eBTC protocol | Valid States | ✅ |
--> TODO: Remove
-
-| R-05 | Partially redeemed CDP is re-inserted into the sorted list of CDPs, and remains active, with reduced collateral and debt. Linked List invariant is maintained. And new values correspond with tokens burned and transferred. | Unit Tests | |
--> TODO: SCRAP -> Invariant of List integrity covers this
-
+| R-04 | Redemptions are disabled during the first 14 days of operation since deployment of the eBTC protocol | Valid States | Valid to remove |
+| R-05 | Partially redeemed CDP is re-inserted into the sorted list of CDPs, and remains active, with reduced collateral and debt. Linked List invariant is maintained. And new values correspond with tokens burned and transferred. | Unit Tests |SCRAPPED -> Invariant of List integrity covers this|
 | R-06 | If the redemption causes a CDP's full debt to be cancelled, the CDP is then closed: Gas Stipend from the Liquidation Reserve becomes avaiable for the borrower to reclaim along of the CDP's Collateral Surplus. The original CDP owner gets the stipend when a CDP is fully closed by redemption | Unit Tests | |
--> TODO: Code
-
 | R-07 | TCR should not decrease after redemptions | Unit Tests | ✅ |
-
 | R-08 | The user eBTC balance should be used to pay the system debt | Unit Tests | ✅ |
 
 ## Liquidations - Pls Antonio Review
@@ -124,20 +109,12 @@ Recon Attack IMO
 | Property | Description | Category | Tested |
 | --- | --- | --- | --- |
 | L-01 | Liquidation only succeeds if ICR < 110% in normal mode, or if ICR < 125% in Recovery Mode. | State Transitions | ✅ |
-
 | L-04 | A "Gas Stipend" of 0.2 stETH is previously deposited by the borrower as insurance against liquidation costs | Unit Tests | ✅ |
 | L-05 | Anyone may call the public `liquidateCdps` and `batchLiquidateCdps` functions | Unit Tests | ✅ |
-
-| L-07 | Gas compensation per liquidated CDP is given by the formula: Full liquidation Gas compensation = max(1.03, min(ICR, 1.1)) + Gas Stipend, Partial liquidation Gas compensation = max(1.03, min(ICR, 1.1)) | Unit Tests | |
--> TODO
-
+| L-07 | Gas compensation per liquidated CDP is given by the formula: Full liquidation Gas compensation = max(1.03, min(ICR, 1.1)) + Gas Stipend, Partial liquidation Gas compensation = max(1.03, min(ICR, 1.1)) | Unit Tests | TODO |
 | L-08 | When a CDP is liquidated, all of the collateral is transferred to the liquidator. When it's fully liquidated, the SHARES are transferred (balance may cause rounding errors). | State Transitions | ✅ |
-
-| L-09 | Undercollateralized liquidations are also incentivized with the Gas Stipend. Full liquidations of any type, always pay the stipend | Unit Tests | |
--> TODO
-
+| L-09 | Undercollateralized liquidations are also incentivized with the Gas Stipend. Full liquidations of any type, always pay the stipend | Unit Tests | TODO |
 | L-10 | As a Individual Leveraged to the maximum (110 CR), I can only be liquidated if: The oracle price changes in such a way that my CR goes below 110 or Other depositors bring the system CR to 125 (edge of Recovery Mode), then the Oracle Price updates to a lower value, causing every CDP below RM to be liquidatable | State Transitions |  |
-
 | L-12 | TCR must increase after liquidation with no redistributions | High Level | ❌ | Breaks if all CDPs are underwater
 | L-14 | If the RM grace period is set and we're in recovery mode, new actions that keep the system in recovery mode should not change the cooldown timestamp | High Level | ✅ |
 | L-15 | The RM grace period should set if a BO/liquidation/redistribution makes the TCR above CCR | High Level | ❌ | Breaks if nobody calls to sync (known)

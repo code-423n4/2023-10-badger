@@ -30,6 +30,11 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 
 
 # Overview
+eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and built on the Ethereum network. It is backed exclusively by Staked Ether (stETH) and powered by immutable smart contracts with minimized counterparty reliance. It’s designed to be the most decentralized synthetic BTC in DeFi and offers the ability for anyone in the world to borrow BTC at no cost.
+
+- See [Primary Readme](./README_EBTC.md).
+- See [Intro Video](https://www.youtube.com/watch?v=QWIB4avTkt4).
+- See the [eBTC Cheatsheet](https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6) for additional videos and an up to date list of additional resources.
 
 ## Links
 [Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md) contains further links.
@@ -46,18 +51,9 @@ All findings contained in theses reports:
 [ebtc.finance](https://www.ebtc.finance/)
 - **Twitter:** 
 [eBTCProtocol](https://twitter.com/eBTCprotocol)
-- **Discord:** 
+
 
 # Scope
-
-[ ⭐️ SPONSORS: add scoping and technical details here ]
-
-- [ ] In the table format shown below, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
 |File|SLOC|Description|
 :-|:-:|:-|
@@ -213,10 +209,11 @@ setRedemptionsPaused
   - `EBTCToken`: Should comply with `ERC20, ERC2612`
 
 ## Attack ideas (Where to look for bugs)
-See Known Issues section and rrevious audit reports.
+See [Known Issues](./README_EBTC.md#known-issues) section and previous audit reports.
 
 ## Main invariants
-[PROPERTIES.md](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PROPERTIES.md) file.
+- [PROPERTIES.md](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PROPERTIES.md) file contains the main invariants.
+- Also see [Price Feed](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/specs/PriceFeed.tree) state machine for reference.
 
 ## Scoping Details 
 
