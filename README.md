@@ -143,6 +143,14 @@ All findings contained in theses reports:
 
 All other contracts in the repo.
 
+Especially:
+- Test Files
+- /Proxy
+- /TestContracts
+
+- Echidna and Foundry Files
+- Tellor related Files, Tellor will not be used
+
 # Additional Context
 
 - Describe any novel or unique curve logic or mathematical models implemented in the contracts.
