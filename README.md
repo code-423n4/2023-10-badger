@@ -106,7 +106,7 @@ All findings contained in theses reports:
 |[/packages/contracts/contracts/Dependencies/EbtcMath.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/EbtcMath.sol)|62|More common math functions for system contracts.|
 |[/packages/contracts/contracts/Dependencies/ReentrancyGuard.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/ReentrancyGuard.sol)|12|Simple, optimized reentrancy guard.|
 |[/packages/contracts/contracts/Dependencies/RolesAuthority.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/RolesAuthority.sol)|102|Role-based authorization from solmate. Expanded functionality for use with Governor.|
-|_Core Interface (17)_|
+|_Core Interface (16)_|
 |[/packages/contracts/contracts/Interfaces/IActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IActivePool.sol)|28|ActivePool interface|
 |[/packages/contracts/contracts/Interfaces/IBorrowerOperations.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/IBorrowerOperations.sol)|68|BorrowerOperations primary interface|
 |[/packages/contracts/contracts/Interfaces/ICdpManager.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Interfaces/ICdpManager.sol)|52|CdpManager primary interface|
