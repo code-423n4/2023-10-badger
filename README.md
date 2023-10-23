@@ -73,8 +73,8 @@ All findings contained in theses reports:
 
 **Scope Table:**
 
-|File|SLOC|Description|Capabilities|
-:-|:-:|:-:|:-|
+|File|SLOC|Description|
+:-|:-:|:-|
 |_Core Protocol Contracts (10)_|
 |[/packages/contracts/contracts/ActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/ActivePool.sol) 📤Σ|221|Manages system-level internal accounting and stETH tokens.|
 |[/packages/contracts/contracts/BorrowerOperations.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/BorrowerOperations.sol) 🧮🔖|751|Entry point to Open, Adjust, and Close Cdps as well as delegate positionManagers.|
