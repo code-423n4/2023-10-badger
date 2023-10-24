@@ -234,7 +234,10 @@ setRedemptionsPaused
 
 #### DOS Minimum Duration
 
-- [ ] In the event of a DOS, could you outline a minimum duration after which you would consider a finding to be valid? This question is asked in the context of most systems' capacity to handle DoS attacks gracefully for a certain period.
+- User operations, outside of Race Conditions, User Mistake or Design (e.g. Recovery Mode) should never be blocked
+- Liquidations should always offer at least a 3% premium and Gas Stipend
+- Coll Surplus should always pay back the surplus to the rightful Cdp owner
+
 
 #### EIP Compliance
 
