@@ -125,11 +125,15 @@ All findings contained in theses reports:
 All other contracts in the repo.
 
 Especially:
-- CrLens (see Known Issues)
-- Test Files
+- CRLens.sol
+- EBTCDeployer.sol
+- FeeRecipient.sol
+- Migrations.sol
+- MultiCdpGetter.sol
+- LiquidationSequencer.sol
+- SyncedLiquidationSequencer.sol
 - /Proxy
 - /TestContracts
-
 - Echidna and Foundry Files
 - Tellor related Files, Tellor will not be used
 
