@@ -87,19 +87,16 @@ All findings contained in theses reports:
 |[/packages/contracts/contracts/EBTCToken.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/EBTCToken.sol) 🧮🔖Σ|223|ERC20 EbtcToken, with permit approvals and extensible minting.|
 |[/packages/contracts/contracts/Governor.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Governor.sol)|107|Roles-based authorization contract, adapted and expanded from solmate Authority. Expanded with more convenience view functions and ability to permanently burn capabilities.|
 |[/packages/contracts/contracts/PriceFeed.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/PriceFeed.sol) ♻️|491|PriceFeed with primary and secondary oracles and state machine to switch between them and handle failure cases.|
-|[/packages/contracts/contracts/SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/AAASortedCdps.sol)  
-Σ|399|Data storage for the doubly-linked list of Cdps. Sorting of Cdps is used to enforce redemptions from lowest ICR to highest ICR.|
+|[/packages/contracts/contracts/SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/AAASortedCdps.sol) Σ|399|Data storage for the doubly-linked list of Cdps. Sorting of Cdps is used to enforce redemptions from lowest ICR to highest ICR.|
 |_Lens / Helper Contracts (2)_|
 |[/packages/contracts/contracts/HintHelpers.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/HintHelpers.sol) 🧮Σ|142|Generate approximate locations for proper linked list insertion locations for Cdps.|
 |[/packages/contracts/contracts/CRLens.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CRLens.sol) 🖥♻️|98|Simulate state changes and view results, to compare to expected results in testing env.|
 |_Leverage Macros & Smart Wallets (5)_|
 |[/packages/contracts/contracts/LeverageMacroBase.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroBase.sol) 🖥📤🧮Σ|353|Common base implementation of the LeverageMacro.|
 |[/packages/contracts/contracts/LeverageMacroDelegateTarget.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroDelegateTarget.sol) 🔆|30|LeverageMacro variant for use with delegateCall with compatible smart wallets.|
-|[/packages/contracts/contracts/LeverageMacroFactory.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroFactory.sol)  
-🌀|46|Factory for deploying LeverageMacroReference|
+|[/packages/contracts/contracts/LeverageMacroFactory.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroFactory.sol) 🌀|46|Factory for deploying LeverageMacroReference|
 |[/packages/contracts/contracts/LeverageMacroReference.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroReference.sol)|38|LeverageMacro variant for use as a zap with an individual owner.|
-|[/packages/contracts/contracts/SimplifiedDiamondLike.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/SimplifiedDiamondLike.sol)  
-🖥💰👥🧮Σ|109|Smart wallet with custom callback handler support.|
+|[/packages/contracts/contracts/SimplifiedDiamondLike.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/SimplifiedDiamondLike.sol) 🖥💰👥🧮Σ|109|Smart wallet with custom callback handler support.|
 |_Modified Dependencies (7)_|
 |[/packages/contracts/contracts/Dependencies/Auth.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/Auth.sol)|33|Inherited by contracts consuming authorization rules of Governor.|
 |[/packages/contracts/contracts/Dependencies/AuthNoOwner.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Dependencies/AuthNoOwner.sol)|36|Inherited by contracts consuming authorization rules of Governor. Removes owner address that has global 'admin' permission from Auth.|
