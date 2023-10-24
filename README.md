@@ -26,9 +26,7 @@ The 4naly3er report can be found [here](https://gist.github.com/JustDravee/08616
 
 [Badger provided 4 previous audit reports and known issues](https://gist.github.com/GalloDaSballo/a0f9766bf7bac391f49d2d167e947de0)
 
-Automated findings output for the audit can be found [here](https://github.com/code-423n4/2023-10-badger/blob/main/bot-report.md) and within 24 hours of audit opening.
-
-_Note for C4 wardens: Anything included in the 4naly3er **or** the automated findings output is considered a publicly known issue and is ineligible for awards._
+_Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
 # Overview
 
