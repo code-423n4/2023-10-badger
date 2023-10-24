@@ -240,7 +240,7 @@ setRedemptionsPaused
 
 ## Attack ideas (Where to look for bugs)
 
-See [Known Issues](./README_EBTC.md#known-issues) section and previous audit reports.
+See [Known Issues](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md#known-issues) section and previous audit reports.
 
 ## Main invariants
 
@@ -285,3 +285,7 @@ Gas report
 ```
 forge test --gas-report
 ```
+
+# Certora Formal Verification Setup
+
+See [./certora/README.md](https://github.com/code-423n4/2023-10-badger/blob/main/certora/README.md)

@@ -6,20 +6,20 @@ The formal verification component of the contest is about using the Certora prov
 
 ## Scope
 
-| Contract                                                                                                                                                                                               | SLOC |     |     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- | --- | --- |
-| [ActivePool.sol](https://github.com/code-423n4/2023-10-badger/packages/contracts/contracts/ActivePool.sol)                                                                   | 212   |
-| [CollSurplusPool.sol](https://github.com/code-423n4/2023-10-badger/packages/contracts/contracts/CollSurplusPool.sol)             | 83  |
-| [EBTCToken.sol](https://github.com/code-423n4/2023-10-badger/packages/contracts/contracts/EBTCToken.sol)                       | 201  |
-| [SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/packages/contracts/contracts/SortedCdps.sol) | 339  |
+| Contract                                                                                                                                                                                               | SLOC |     
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| [ActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/ActivePool.sol)                                                                   | 212   |
+| [CollSurplusPool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CollSurplusPool.sol)             | 83  |
+| [EBTCToken.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/EBTCToken.sol)                       | 201  |
+| [SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/SortedCdps.sol) | 339  |
 
 ## Getting Started
 
 The participation and submission process in this component of the contest will be different. Participants will need to create a private fork of this repo and give editor access to `teryanarmen`, `nd-certora`, and `mailalexjoseph`. Submission doesn't require any additional work once the judges have access to your repo. Note that commits after the deadline will be ignored and may disqualify you, so please ensure all work is completed by the deadline.
 
-Work should be completed in the [certora](https://githum.com/code-423n4/2023-10-badger/certora/) directory. Some tool configurations have been prepared for you. You can edit these as needed or create new ones. Please maintain the current structure and style of the directory. Only verified rules should be run with confs ending in `_verified` and should run all rules you want to be considered for the coverage, participation, and beginner awards. Please create additional confs with `_violated` ending for real bug catching properties. 
+Work should be completed in the [certora](https://github.com/code-423n4/2023-10-badger/blob/main/certora/) directory. Some tool configurations have been prepared for you. You can edit these as needed or create new ones. Please maintain the current structure and style of the directory. Only verified rules should be run with confs ending in `_verified` and should run all rules you want to be considered for the coverage, participation, and beginner awards. Please create additional confs with `_violated` ending for real bug catching properties. 
 
-The contest will be judged using private and public mutations. Public mutations are available in the [certora directory](https://githum.com/code-423n4/2023-10-badger/certora/mutations) and will be used for the participation reward calculation. Private mutations will be made public along with the contest results and will be used for the coverage and beginner reward calculation.
+The contest will be judged using private and public mutations. Public mutations are available in the [certora directory](https://github.com/code-423n4/2023-10-badger/blob/main/certora/mutations) and will be used for the participation reward calculation. Private mutations will be made public along with the contest results and will be used for the coverage and beginner reward calculation.
 
 The Certora Prover installation instructions can be found [here](https://docs.certora.com/en/latest/docs/user-guide/getting-started/install.html?highlight=install). Briefly, you must install
 
@@ -43,8 +43,8 @@ The total reward is split into four categories: participation, real bugs, covera
 
 - Coverage rewards (60% of FV pool) are awarded for verified rules written for `ActivePool`,  `CollSurplusPool`, and `SortedCdps`
 - Real bug rewards (20% of FV pool) are awarded for rules catching real bugs. 
-- Participation rewards (10% of FV pool) are awarded for catching all [3 publicly available mutations](https://github.com/code-423n4/2023-10-badger/certora/mutations/).
-- Beginner rewards (10% of FV pool) are awarded for coverage rules written for [EBTCToken](https://github.com/code-423n4/2023-10-badger/packages/contracts/contracts/EBTCToken.sol)
+- Participation rewards (10% of FV pool) are awarded for catching all [3 publicly available mutations](https://github.com/code-423n4/2023-10-badger/blob/main/certora/mutations/).
+- Beginner rewards (10% of FV pool) are awarded for coverage rules written for [EBTCToken](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/EBTCToken.sol)
 
 Coverage rewards are calculated based on coverage. Coverage is determined using private mutations to the code. The private mutations will be made public after the reward calculation. The value of each mutation decreases as more wardens catch it, similar to bugs in the audit contest component. There will be approximately 10 mutations per contract. Coverage rewards will not be awarded for contracts in the "beginner" scope (EBTCToken).
 
@@ -57,6 +57,7 @@ Beginner rewards will be distributed similarly to coverage rewards but the scope
 ## Mutation Testing
 
 Gambit confs have been provided for all the in scope contracts. To run mutation testing, you can do `certoraMutate --prover_conf certora/confs/contract_verified.conf --mutation_conf certora/confs/gambit/contract.conf`. You can change the number of bugs that are inject by adding manual mutations in the `mutations` folder in a similar fashion to the public mutations and by changing the value of automatic mutation in the contract's gambit conf.
+
 ---
 
 ## Additional Information
