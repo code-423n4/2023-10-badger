@@ -303,7 +303,7 @@ See [./certora/README.md](https://github.com/code-423n4/2023-10-badger/blob/main
 Run Medusa with
 
 ```
-solc-select use 0.8.17 && cd packages/contracts/ && medusa fuzz
+yarn && git submodule init && git submodule update && solc-select use 0.8.17 && solc-select use 0.8.17 && cd packages/contracts/ && medusa fuzz
 ```
 
 Run Echidna With
