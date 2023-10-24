@@ -10,9 +10,10 @@
   - Lookout awards: $6,000 USDC
   - Scout awards: $500 USDC
 - Total FV Prize Pool: $30,000 USDC
-  - Real Bug Rules: $7,500 USDC
-  - Mutation Rules $19,500 USDC
+  - Real Bug Rules: $6,000 USDC
+  - Coverage Rules $18,000 USDC
   - Participation: $3,000 USDC
+  - Beginner Pool: $3,000 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-badger-ebtc-audit-certora-formal-verification-competition/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
@@ -36,6 +37,7 @@ eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and bu
 - See [Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md).
 - See [Intro Video](https://www.youtube.com/watch?v=QWIB4avTkt4).
 - See the [eBTC Cheatsheet](https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6) for additional videos and an up to date list of additional resources.
+- See the [Formal Verification Readme](https://github.com/code-423n4/2023-10-badger/blob/main/certora/README.md) for FV details.
 
 ## Links
 
