@@ -296,3 +296,19 @@ forge test --gas-report
 # Certora Formal Verification Setup
 
 See [./certora/README.md](https://github.com/code-423n4/2023-10-badger/blob/main/certora/README.md)
+
+
+# Echidna and Medusa Invariants One Liners
+
+Run Medusa with
+
+```
+cd code && solc-select use 0.8.17 && cd packages/contracts/ && medusa fuzz
+```
+
+Run Echidna With
+```
+yarn && git submodule init && git submodule update && solc-select use 0.8.17 && cd packages/contracts/ && yarn echidna --test-mode assertion --test-limit 100000
+```
+
+If you're having issues, use the Dockerfile
