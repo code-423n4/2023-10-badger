@@ -75,7 +75,7 @@ All findings contained in theses reports:
 
 |File|SLOC|Description|
 :-|:-:|:-|
-|_Core Protocol Contracts (9)_|
+|_Core Protocol Contracts (10)_|
 |[/packages/contracts/contracts/ActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/ActivePool.sol) 📤Σ|221|Manages system-level internal accounting and stETH tokens.|
 |[/packages/contracts/contracts/BorrowerOperations.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/BorrowerOperations.sol) 🧮🔖|751|Entry point to Open, Adjust, and Close Cdps as well as delegate positionManagers.|
 |[/packages/contracts/contracts/CdpManager.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CdpManager.sol)|578|Cdp operations and entry point for non-borrower operations on Cdps (Liquidations, Redemptions).|
@@ -86,7 +86,7 @@ All findings contained in theses reports:
 |[/packages/contracts/contracts/Governor.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/Governor.sol)|107|Roles-based authorization contract, adapted and expanded from solmate Authority. Expanded with more convenience view functions and ability to permanently burn capabilities.|
 |[/packages/contracts/contracts/PriceFeed.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/PriceFeed.sol) ♻️|491|PriceFeed with primary and secondary oracles and state machine to switch between them and handle failure cases.|
 |[/packages/contracts/contracts/SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/SortedCdps.sol) Σ|399|Data storage for the doubly-linked list of Cdps. Sorting of Cdps is used to enforce redemptions from lowest ICR to highest ICR.|
-|_Lens / Helper Contracts (2)_|
+|_Lens / Helper Contracts (1)_|
 |[/packages/contracts/contracts/HintHelpers.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/HintHelpers.sol) 🧮Σ|142|Generate approximate locations for proper linked list insertion locations for Cdps.|
 |_Leverage Macros & Smart Wallets (5)_|
 |[/packages/contracts/contracts/LeverageMacroBase.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroBase.sol) 🖥📤🧮Σ|353|Common base implementation of the LeverageMacro.|
