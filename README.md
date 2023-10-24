@@ -75,7 +75,7 @@ All findings contained in theses reports:
 
 |File|SLOC|Description|
 :-|:-:|:-|
-|_Core Protocol Contracts (10)_|
+|_Core Protocol Contracts (9)_|
 |[/packages/contracts/contracts/ActivePool.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/ActivePool.sol) 📤Σ|221|Manages system-level internal accounting and stETH tokens.|
 |[/packages/contracts/contracts/BorrowerOperations.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/BorrowerOperations.sol) 🧮🔖|751|Entry point to Open, Adjust, and Close Cdps as well as delegate positionManagers.|
 |[/packages/contracts/contracts/CdpManager.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CdpManager.sol)|578|Cdp operations and entry point for non-borrower operations on Cdps (Liquidations, Redemptions).|
@@ -88,7 +88,6 @@ All findings contained in theses reports:
 |[/packages/contracts/contracts/SortedCdps.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/SortedCdps.sol) Σ|399|Data storage for the doubly-linked list of Cdps. Sorting of Cdps is used to enforce redemptions from lowest ICR to highest ICR.|
 |_Lens / Helper Contracts (2)_|
 |[/packages/contracts/contracts/HintHelpers.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/HintHelpers.sol) 🧮Σ|142|Generate approximate locations for proper linked list insertion locations for Cdps.|
-|[/packages/contracts/contracts/CRLens.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/CRLens.sol) 🖥♻️|98|Simulate state changes and view results, to compare to expected results in testing env.|
 |_Leverage Macros & Smart Wallets (5)_|
 |[/packages/contracts/contracts/LeverageMacroBase.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroBase.sol) 🖥📤🧮Σ|353|Common base implementation of the LeverageMacro.|
 |[/packages/contracts/contracts/LeverageMacroDelegateTarget.sol](https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/contracts/LeverageMacroDelegateTarget.sol) 🔆|30|LeverageMacro variant for use with delegateCall with compatible smart wallets.|
@@ -126,7 +125,7 @@ All findings contained in theses reports:
 All other contracts in the repo.
 
 Especially:
-
+- CrLens (see Known Issues)
 - Test Files
 - /Proxy
 - /TestContracts
