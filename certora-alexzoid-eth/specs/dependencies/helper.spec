@@ -1,0 +1,17 @@
+/////////////////// METHODS ///////////////////////
+
+///////////////// DEFINITIONS /////////////////////
+
+definition VIEW_PURE_FUNCTIONS(method f) returns bool =
+    f.isView || f.isPure;
+
+////////////////// FUNCTIONS //////////////////////
+
+///////////////// GHOSTS & HOOKS //////////////////
+
+///////////////// PROPERTIES //////////////////////
+
+rule helperSanity(method f, env e, calldataarg args) {
+    f(e, args);
+    satisfy(true);
+}
