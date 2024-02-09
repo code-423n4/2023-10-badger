@@ -1,0 +1,7 @@
+"binary-op-mutation"
+"unary-operator-mutation"
+"require-mutation"
+"assignment-mutation"
+"delete-expression-mutation"
+"if-statement-mutation"
+"swap-arguments-operator-mutation"
