@@ -1,0 +1,1559 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2023 / badgerebtc-oct24
+==============================================================
+
+[10/20/2023 17:11] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the $149,725 USDC **Badger eBTC Audit + Certora Formal Verification Competition** audit!
+
+📆 Audit opens 10/24/2023 20:00 (20:00 UTC) and runs through 11/14/2023 20:00 (20:00 UTC) (21 days).
+
+Please give a warm welcome to the eBTC Protocol team, particularly @Alex The Entreprenerd and @dapp_whisperer, who will be available for questions either here in the channel or via DM in the EST, CST timezone(s).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-10-badger-ebtc-audit-certora-formal-verification-competition#top
+
+{Embed}
+https://code4rena.com/contests/2023-10-badger-ebtc-audit-certora-formal-verification-competition
+Badger eBTC Audit + Certora Formal Verification Competition | Code4...
+Use stETH to borrow Bitcoin with 0% fees | The only smart contract based #BTC.
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/c4-og-banner-C1DB1.png
+
+{Reactions}
+cheers_badger (10) 
+
+[10/20/2023 17:11] kartoonjoy
+Pinned a message.
+
+
+[10/20/2023 20:13] alextheentreprenerd (pinned)
+ICYM https://www.youtube.com/watch?v=QWIB4avTkt4
+
+{Reactions}
+hi5 (12) 🔥 (5) 
+
+[10/22/2023 11:21] alextheentreprenerd (pinned)
+Code was linked on twitter, linking here:
+https://github.com/ebtc-protocol/ebtc
+
+The code is subject to changes until the contest repo is made public
+
+{Reactions}
+🦡 (5) chefskiss (3) 10_10 (4) 
+
+[10/22/2023 13:07] kartoonjoy
+Pinned a message.
+
+
+[10/22/2023 13:07] kartoonjoy
+Pinned a message.
+
+
+[10/23/2023 06:33] 0xkarl98
+another Certora project !
+
+
+[10/23/2023 10:09] 0xsimeon
+What happens in cetora projects?
+
+
+[10/23/2023 10:25] teryanarmen
+Wardens are incentivized to formally verify the code. Check out [the last contest](https://github.com/code-423n4/2023-08-gmx-fv) for more details. Some of the details for this contest will be different so make sure to read the readme in the contest repo once its live.
+
+{Embed}
+https://github.com/code-423n4/2023-08-gmx-fv
+GitHub - code-423n4/2023-08-gmx-fv
+Contribute to code-423n4/2023-08-gmx-fv development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/d0b2d46b-eee0-4345-8088-b9c13ff25a2f-83CE9
+
+
+[10/24/2023 03:30] olanre_waju
+what do you mean by formally verify?
+
+
+[10/24/2023 06:59] kartoonjoy
+Did you check the `last contest` link that Armen mentions?
+
+
+[10/24/2023 08:29] zzebra83
+the quality of the documentation is amazing. great work from the team!
+
+{Reactions}
+👀 (8) 
+
+[10/24/2023 13:26] whitehat.eth
+👨‍🍳
+
+
+[10/24/2023 16:53] alextheentreprenerd
+Note that the Scope in he public repo is different from the one that will be in the Contest
+Contest Scope is the valid one
+
+
+[10/24/2023 18:38] alextheentreprenerd (pinned)
+Most of the questions you may have are already covered in this Gist (there's like 15+ videos):
+https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
+
+{Embed}
+https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
+eBTC CheatSheet.MD
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/gist-og-image-14833.png
+
+{Reactions}
+👀 (3) 
+
+[10/24/2023 18:38] alextheentreprenerd
+Best of luck in the arena!
+
+{Reactions}
+thankyou (9) 
+
+[10/24/2023 18:39] itsmetechjay
+Pinned a message.
+
+
+[10/24/2023 20:03] 0k_sec
+hey before starting, did all findings from the previous audit process fixed please ?
+
+
+and good luck to all wardens
+
+
+[10/24/2023 20:13] czar102
+Why are there two separate H/M pots? One within the c4 contest and one within the Certora contest… Wouldn't it make more sense to leave fv coverage to certora and aggregate all issues in c4? Double submisson and double rewards don't make much sense to me…
+
+
+[10/24/2023 20:15] czar102
+Also, the rsvp posted 1999 sloc but just top 4 contracts in size exceed 2500 sloc… How does it work?
+
+
+[10/24/2023 20:23] thebrittfactor (pinned)
+**4naly3er Report and Publicly Known Issues**
+
+The 4naly3er report can be found [here](https://gist.github.com/JustDravee/086169a02a71f82beaf8a0ef8eff91ad).
+
+Publicly Known Issues can be found [here](https://gist.github.com/GalloDaSballo/a0f9766bf7bac391f49d2d167e947de0). 
+
+*Note for C4 wardens: The 4naly3er report is ran by our pre-audit Scouts and will be posted at audit launch. This will be in addition to the Publicly known issues provided by the sponsor, so anything included in the 4naly3er or in the considered publicly known issues is ineligible for awards.*
+
+
+[10/24/2023 20:26] thebrittfactor
+Pinned a message.
+
+
+[10/24/2023 20:30] ladboy233
+this cheasheet is very useful and deserve a pin
+
+
+[10/24/2023 20:31] kartoonjoy
+It is pinned.
+
+
+[10/25/2023 06:55] alextheentreprenerd
+Started a thread.
+
+
+[10/25/2023 06:55] alextheentreprenerd
+Started a thread.
+
+
+[10/25/2023 07:47] _3doc_
+for the certora work is it OK to create a branch in our private repo? I'd like to create an "audit" branch to not mess up my changes with the original repo; I have no problem in making the "audit" branch the default one on GH
+
+
+[10/25/2023 07:47] teryanarmen
+Sure, please make it the default branch though.
+
+{Reactions}
+🙏 👍 
+
+[10/25/2023 08:20] benrai
+When I run forge coverage I get the following Error. How can I fix it without changing the test file? Or do I need to definately change the test file?
+
+
+[10/25/2023 08:20] benrai
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-B7F40.png
+
+
+[10/25/2023 08:34] wangxx2026
+try forge coverage --ir-minimum
+
+
+[10/25/2023 08:49] benrai
+Did not work unfortunately
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-0E0F7.png
+
+{Reactions}
+😭 
+
+[10/25/2023 09:21] alextheentreprenerd
+Try with docker
+
+
+[10/25/2023 09:21] alextheentreprenerd
+Or foundryup probably, never saw that error
+
+
+[10/25/2023 09:30] alextheentreprenerd
+Seems like `forge coverage` doesn't work, will flag
+
+
+[10/25/2023 10:15] alextheentreprenerd
+Added the `forge coverage` output to the Cheatsheet: https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
+
+I commented out the function that gives you issues, that may have some impact
+
+
+[10/25/2023 10:31] teryanarmen
+Hey everyone, please fill out [this form](https://docs.google.com/forms/d/1Hp5UiwQnR1PCyS_-bZVpuO_xJZcPUfbFR-s9w8E3HO0) if you plan on submitting work for the fv component. Once filled out a key for the prover will be sent to you (can take up to 12 hours). Thank you.
+
+
+[10/25/2023 12:36] _3doc_
+question on certora CVL (total noob disclaimer): I struggle to find in the docs what is the syntax to get the called contract address... there is a `currentContract` placeholder but not sure if that's the right place (and if so how) to extract an address from... would anybody know it?
+
+
+[10/25/2023 13:58] teryanarmen
+currentContract will be the address.
+
+
+[10/25/2023 13:58] teryanarmen
+Also, the best place to ask prover related questions is the help-desk channel in the [Certora discord](https://discord.gg/certora) as more of our team is monitoring that channel.
+
+{Reactions}
+👍 
+
+[10/25/2023 14:04] _3doc_
+Thank you, I figured I was confused by another error on the same line.
+
+
+[10/25/2023 14:04] _3doc_
+noted, will do, thank you so much
+
+
+[10/25/2023 15:28] 0xhelium
+fv noob here: how does fv work ? Is it just like classic contest ? I would appreciate a thread or article from a warden or an explanatory one .
+
+
+[10/25/2023 15:29] 0xhelium
+Can't seems to find my way reading the  readme
+
+
+[10/25/2023 16:03] teryanarmen (pinned)
+There's the [whitepaper](https://docs.certora.com/en/latest/docs/whitepaper/index.html), quite a few videos about it also.
+
+
+[10/25/2023 16:47] aleksandercertora (pinned)
+maybe these videos can answer some of your questions:
+https://www.youtube.com/watch?v=jv_1hEeG-lk (intro to Certora and our FV tool, quite fresh webinar)
+https://www.youtube.com/watch?v=ba0OO-HnnF4&t=1669s (more technical intro and old in terms of report page/syntax, bur can give you a general understanding as well)
+
+
+[10/25/2023 16:51] kartoonjoy
+Pinned a message.
+
+
+[10/25/2023 16:52] kartoonjoy
+Pinned a message.
+
+
+[10/26/2023 02:24] nailkhalimov
+Hey guys! I've started to make a auditing, but tests taking already more than 30 mins😒
+Is there any solutions to quickly make only gas report?
+
+
+[10/26/2023 06:31] alextheentreprenerd
+Run foundry tests they take less time
+
+{Reactions}
+👍 
+
+[10/26/2023 07:42] alextheentreprenerd
+If foundry is stuck, set `fuzz runs` to 1
+
+
+[10/26/2023 07:43] wisdomn_
+How ser?
+
+
+[10/26/2023 07:45] alextheentreprenerd
+Change this line in `foundry.toml` in `/contracts`
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/Screenshot_2023-10-26_at_09.45.01-5BAE4.png
+
+
+[10/26/2023 09:12] wisdomn_
+Okay, thanks.
+
+{Reactions}
+👍 
+
+[10/26/2023 16:00] alextheentreprenerd
+Preparing for the workshop for tomorrow.
+
+If you have specific questions about functions or code, drop them in this thread
+
+
+[10/26/2023 18:06] shahen.0000
+@Alex The Entreprenerd hey, can i get the git clone url for the repo
+
+
+[10/26/2023 18:06] shahen.0000
+Thanks
+
+
+[10/26/2023 18:11] shahen.0000
+Nvm, got it done
+
+
+[10/26/2023 18:22] shahen.0000
+getting this when trying to forge build
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image_2023-10-26_235159987-90D40.png
+
+
+[10/26/2023 18:25] fktworld
+Relative path error
+
+
+[10/26/2023 18:25] shahen.0000
+know how to fix it?
+
+
+[10/26/2023 18:26] alextheentreprenerd
+Yarn from root first
+
+
+[10/26/2023 18:27] shahen.0000
+so the root here is considered packages/contracts?
+
+
+[10/26/2023 18:27] alextheentreprenerd
+No
+
+
+[10/26/2023 18:28] alextheentreprenerd
+There’s a command to build deps and sync sub modules check the readme
+
+
+[10/26/2023 18:37] qwertypark
+@Alex The Entreprenerd hi, can you confirm that current codebase is the one with all fixes from previous audits? I currently see some audit comments in EbtcBase.sol https://github.com/code-423n4/2023-10-badger/blob/f2f2e2cf9965a1020661d179af46cb49e993cb7e/packages/contracts/contracts/Dependencies/EbtcBase.sol#L140-L143
+
+
+[10/26/2023 18:42] alextheentreprenerd
+Yes we left the comments to give you hints
+
+{Reactions}
+👍 (3) thankyou 
+
+[10/27/2023 17:11] debofx
+Hi @dapp_whisperer 
+Do any test constant values exist for uint8 v
+Bytes32 r
+Bytes32 s
+?
+
+
+[10/27/2023 17:17] dapp_whisperer
+Hi Debo, can you share a bit more context on what you’re looking into?
+
+
+[10/27/2023 17:34] debofx
+Yes, sure. I just DM you.
+
+
+[10/28/2023 19:06] j5066
+i getting this error when i trying to forge build
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/Screenshot_from_2023-10-28_23-30-56-F8828.png
+
+
+[10/28/2023 19:15] alextheentreprenerd
+It’s missing the dependencies, check the readme to import submodules and run yarn
+
+
+[10/28/2023 20:43] debofx
+You might need to run foundryup as well.
+
+
+[10/28/2023 20:55] shahen.0000
+Got the same error but fixed it, Goto root an yarn first, Also if your using the latest node version wont work, Instead of downgrading use NVM so youll be able to switch between versions, So install node version 16 then `nvm use 16` then install yarn, run yarn on root, then cd to packages/contracts and forge build
+
+
+[10/29/2023 08:19] alextheentreprenerd
+We have a docker image which is tested to work as well that should help
+
+
+[10/29/2023 09:12] csjaybit
+sir what are incentive awards
+
+
+[10/29/2023 09:12] csjaybit
+??
+
+
+[10/29/2023 09:28] whitehat.eth
+l think it's the incentive which is paid to the liquidator after liquidation of a Cdp position.
+
+
+[10/29/2023 09:35] csjaybit
+I am talking about participation awards and such
+
+
+[10/29/2023 09:35] csjaybit
+otal Audit Prize Pool: $119,725 USDC
+
+HM awards: $100,000 USDC
+QA awards: $2,112.50 USDC
+Gas awards: $2,112.50 USDC
+Judge awards: $9,000 USDC
+Lookout awards: $6,000 USDC
+Scout awards: $500 USDC
+Total FV Prize Pool: $30,000 USDC
+
+Real Bug Rules: $6,000 USDC
+Coverage Rules $18,000 USDC
+Participation: $3,000 USDC
+Beginner Pool: $3,000 USDC
+
+
+[10/29/2023 09:36] csjaybit
+what is real bug
+
+
+[10/29/2023 09:36] csjaybit
+coverage etc
+
+
+[10/29/2023 09:37] teryanarmen
+@TK | csjaybit Did you read the README in certora folder?
+
+
+[10/29/2023 09:37] csjaybit
+didnt quiet understood some terms
+
+
+[10/29/2023 09:38] teryanarmen
+Which ones? real bug is a bug found in the code and submitted through c4 and rewarded. mutation is a code change introduced in a separate contract to test coverage of the properties verified. You can see examples of mutations in the certora/mutations folder.
+
+{Reactions}
+👍 
+
+[10/29/2023 09:53] csjaybit
+understood now
+
+
+[10/29/2023 09:55] csjaybit
+so we get paid twice for bug we find??
+
+
+[10/29/2023 09:55] teryanarmen
+Only if you write a valid property that would pass once the bug is fixed.
+
+
+[10/29/2023 09:56] csjaybit
+let me read it again now
+
+
+[10/29/2023 15:23] wisdomn_
+Can you explain more on what counts as "valid property"?
+
+
+[10/29/2023 16:26] 0xarion
+valid rule written in certora prover
+
+{Reactions}
+🙏 (2) 
+
+[10/29/2023 16:35] nirh
+Hey, just to verify I understood, as a CDP owner you might have your CDP closed involuntarily by someone redeeming eBTC and your CDP being next on the sortedCDPs list?
+
+
+[10/29/2023 16:39] alextheentreprenerd
+Yes
+
+
+[10/29/2023 19:25] pxng0lin
+Where can i find more info on these:
+
+    /// @param _upperHint The expected CdpId of neighboring higher ICR within SortedCdps, could be simply bytes32(0)
+    /// @param _lowerHint The expected CdpId of neighboring lower ICR within SortedCdps, could be simply bytes32(0)
+
+
+[10/29/2023 19:25] pxng0lin
+Part of the `openCDP(...)` function in BorrowerOperations.sol
+
+
+[10/29/2023 19:28] pxng0lin
+Niroh can you elaborate on this for me, why would your CDP be closed involuntarily? Is this because its below your ICR and can be liquidated?
+
+
+[10/30/2023 04:28] stryder1496
+have the previous issues by the audits fixed in the code or are there some that are still unfixed ??
+
+
+[10/30/2023 07:20] alextheentreprenerd
+It’s all in the reports
+
+
+[10/30/2023 07:20] alextheentreprenerd
+See sortedCDPs
+
+{Reactions}
+✅ 
+
+[10/30/2023 07:21] alextheentreprenerd
+See what’s happening with liquity rn
+
+{Reactions}
+✅ (2) 
+
+[10/30/2023 08:32] pxng0lin
+Thanks
+
+
+[10/30/2023 08:58] whitehat.eth
+@pxng0lin you should take a look at the purple paper, it is really well written and contains all of the system concepts.
+
+
+[10/30/2023 09:17] pxng0lin
+Brilliant, will do thanks
+
+{Reactions}
+10_10 
+
+[10/30/2023 11:10] sp1cymeatball
+@Alex The Entreprenerd Hey! Is this the actual deploy script? 
+
+https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/migrations/2_deploy_contracts.js
+
+
+[10/30/2023 11:10] alextheentreprenerd
+@dapp_whisperer
+
+
+[10/30/2023 14:46] dapp_whisperer
+no, it's https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/mainnetDeployment/eBTCDeployScript.js
+
+{Embed}
+https://github.com/code-423n4/2023-10-badger/blob/main/packages/contracts/mainnetDeployment/eBTCDeployScript.js
+2023-10-badger/packages/contracts/mainnetDeployment/eBTCDeployScrip...
+Contribute to code-423n4/2023-10-badger development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/d78fd777-bfef-4922-9a33-ad9f6b0c63cd-1844A
+
+{Reactions}
+thankyou 
+
+[10/30/2023 15:01] gamma01
+@dapp_whisperer can I DM you for some clarifications ?
+
+
+[10/30/2023 16:33] 0xlamide#0986
+What purple paper.. U mean the docs?
+
+
+[10/30/2023 17:06] whitehat.eth
+https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
+
+{Embed}
+https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6
+eBTC CheatSheet.MD
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/gist-og-image-54fd7dc0713e-FFBCC.png
+
+
+[10/30/2023 17:06] whitehat.eth
+The link for the purple paper is next to the docs link
+
+
+[10/30/2023 17:46] dapp_whisperer
+Please do
+
+
+[10/30/2023 20:33] mangoeth
+God bless for ethers.js
+
+
+[10/31/2023 02:42] gamma01
+DM'ed
+
+
+[10/31/2023 06:27] 0xlamide#0986
+🙏
+
+
+[10/31/2023 15:40] elvinfevo1
+Please how can I get bot reports
+
+
+[10/31/2023 15:57] whitehat.eth
+https://gist.github.com/JustDravee/086169a02a71f82beaf8a0ef8eff91ad
+
+{Embed}
+https://gist.github.com/JustDravee/086169a02a71f82beaf8a0ef8eff91ad
+2023-10-badger-4naly3er-report.md
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/gist-og-image-54fd7dc0713e-FFBCC.png
+
+
+[10/31/2023 15:59] elvinfevo1
+Thanks
+
+
+[10/31/2023 17:11] lsaudit
+@dapp_whisperer - hey i've DMed you, please check your DMs in your spare time
+
+
+[10/31/2023 17:50] dapp_whisperer
+sure, replied
+
+
+[10/31/2023 17:50] dapp_whisperer
+never recieved this DM if you did
+
+
+[10/31/2023 17:51] gamma01
+I did, my discord user name is gamma.
+
+{Reactions}
+👍 
+
+[10/31/2023 21:14] irving6969
+who can call claimFeeRecipientCollShares ? anyone?
+
+
+[10/31/2023 21:26] whitehat.eth
+Certainly not anyone can call it, suggest you to take a look at the modifier “requiresAuth”.
+
+{Reactions}
+👍 
+
+[11/01/2023 00:45] lsaudit
+@dapp_whisperer  i've dm'd you one more time
+
+{Reactions}
+👍 
+
+[11/01/2023 01:52] shahen.0000
+@dapp_whisperer me too again, pls check
+
+
+[11/01/2023 11:30] 0xstriker
+there is an Analayzer report but there is no Automated findings report. Did this protocol not had a bot race
+
+{Reactions}
+👍 (2) 
+
+[11/02/2023 09:31] sp1cymeatball
+@Alex The Entreprenerd hey! Why do we decrease a user's collateral every time they receive fees from the stETH rebase?
+
+
+[11/02/2023 09:33] alextheentreprenerd
+Cdpshares are reduced
+
+
+[11/02/2023 09:33] alextheentreprenerd
+Value increases
+
+{Reactions}
+thankyou 
+
+[11/02/2023 09:37] sp1cymeatball
+yeah, right
+
+
+[11/02/2023 13:16] wangxx2026
+What is the Governor contract used for? The explanation is a bit vague @Alex The Entreprenerd
+
+
+[11/02/2023 13:23] alextheentreprenerd
+Changes to the settings disclosed in the known findings
+
+
+[11/02/2023 13:31] rotitelur
+Getting `zsh: command not found: medusa` when trying to run the one liner, any steps to setup medusa?
+
+
+[11/02/2023 13:32] rotitelur
+According to here https://github.com/crytic/medusa , step 3 is downloading platform specific binary, and open the file? @Alex The Entreprenerd
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/Screenshot_2023-11-02_at_9.32.11_PM-6AAD9.png
+
+
+[11/02/2023 13:33] alextheentreprenerd
+Yeah use Docker
+
+
+[11/02/2023 13:33] alextheentreprenerd
+We gave you the docker image to make it easy, else you're going to have to figure it out on your own
+
+
+[11/02/2023 13:52] rotitelur
+Started a thread.
+
+
+[11/02/2023 14:31] alextheentreprenerd
+Anybody else using Silicon got Dockerfile to work? Maybe you can help here
+
+
+[11/03/2023 05:59] 0x_white_devil
+From which contract to start with....
+
+{Reactions}
+pepemcdonalds (3) 
+
+[11/03/2023 07:48] alexzoid
+https://drive.google.com/file/d/17_xlcCFeY3Dsx3MkBP_uimHebMxhF_ZO/view
+
+{Embed}
+https://drive.google.com/file/d/17_xlcCFeY3Dsx3MkBP_uimHebMxhF_ZO/view
+eBTC quick tour.mov
+
+
+[11/03/2023 11:27] albertwh1te
+It helps thanks
+
+{Reactions}
+👍 
+
+[11/04/2023 06:54] benrai
+@Alex The Entreprenerd is there a recording of yesterdays workshop about invariants? Unfortunately I missed it
+
+
+[11/04/2023 07:51] alextheentreprenerd
+Prob on Monday
+
+
+[11/04/2023 08:06] benrai
+Ok, thanks for the info
+
+{Reactions}
+👍 
+
+[11/04/2023 12:00] 7a4raf
+in the ebtctoken.sol 
+i don't get the check inside the if statement, why don't we  check for allowance only, what does the previous check mean?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-CE6BB.png
+
+
+[11/04/2023 12:02] alextheentreprenerd
+It doesn’t decrease the allowance if it’s set to max
+
+
+[11/04/2023 12:04] 7a4raf
+is this the case where an account is allowed on all funds inside another account ?
+
+
+[11/04/2023 13:08] alextheentreprenerd
+It’s a ERC20 it behaves in the same way
+
+
+[11/04/2023 13:35] 7a4raf
+ok thanks
+
+
+[11/04/2023 18:05] mangoeth
+sent you a dm
+
+
+[11/05/2023 01:38] shahen.0000
+@Alex The Entreprenerd sent a dm
+
+
+[11/05/2023 01:38] shahen.0000
+pls check
+
+
+[11/05/2023 09:15] ragna5059
+Where are the bugs in this codebase? l can't even find a QA.
+
+{Reactions}
+thisisfine (9) 
+
+[11/05/2023 09:15] ragna5059
+https://tenor.com/view/sad-sad-spongebob-gif-sad-spongebob-spongebob-gif-25853094
+
+{Embed}
+https://tenor.com/view/sad-sad-spongebob-gif-sad-spongebob-spongebob-gif-25853094
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/sad-sad-spongebob-gif-F9422.png
+
+
+[11/05/2023 10:46] beirao
+Fortunately or unfortunatly. hyh leastwood, bernd and Lambda have audited this code base.
+
+{Reactions}
+😂 (4) 
+
+[11/06/2023 08:40] alextheentreprenerd
+Testnet is open if you want to interact with the Demo Contracts, we also setup a Raffle for UI Bug Submissions:
+https://twitter.com/eBTCprotocol/status/1720129960134709518
+
+{Reactions}
+🔥 (4) 
+
+[11/07/2023 12:01] nobody2018
+@Alex The Entreprenerd Are those acknowledged issues that have not been fixed in previous audits regarded as known issues in this contest?
+
+
+[11/07/2023 12:03] alextheentreprenerd
+Yes
+
+{Reactions}
+🙏 
+
+[11/07/2023 12:57] alextheentreprenerd
+Invariant Testing Workshop:
+https://www.youtube.com/watch?v=5XCjmHUcDS0
+
+{Embed}
+Code4rena
+https://www.youtube.com/watch?v=5XCjmHUcDS0
+Code4rena x BadgerDAO x eBTC Protocol Audit Workshop #3: Invariants
+Credit to Antonio for hosting: https://twitter.com/agfviggiano
+
+Code4rena audit: https://code4rena.com/contests/2023-10-badger-ebtc-audit-certora-formal-verification-competition
+
+eBTC Known broken invariants: https://gist.github.com/GalloDaSballo/8402757460a97f5599fad3cffb34859a
+
+eBTC Contest Cheatsheet: https://gist.github.com/GalloDaSballo/7b0...
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/maxresdefault-8A8CF.jpg
+
+{Reactions}
+👀 (6) 🔥 (5) 
+
+[11/08/2023 07:25] gamma01
+@dapp_whisperer  Sent a DM, Please check
+
+
+[11/08/2023 07:36] albertwh1te
+@dapp_whisperer  DMed you.
+
+
+[11/08/2023 07:43] wisdomn_
+@Alex The Entreprenerd Sent a dm ser.
+
+
+[11/08/2023 12:14] nirh
+Hey, sorry if this was asked and I missed it, but wasn't there a bot-race for this audit? All I found was the 4naly3er report in the details and it look pretty lean (only a few gas optimizations), doesn't seem like anything custom race bots produced (just checking before submitting some Low findings to make sure they're not considered known).
+
+
+[11/08/2023 12:27] alextheentreprenerd
+Check 4nalyz3r + 4 audit reports with tons of Lows
+
+
+[11/08/2023 12:55] nirh
+Thanks
+
+
+[11/08/2023 17:19] 0xpolarzero
+Hi. I'd like some help to understand the Certora Prover outputs, when running it with mutations. I've just started using it, so it can get confusing.
+
+So this is a run on the "standard" repo, right after forking it (so no modification yet). I've run the provided command `certoraMutate --prover_conf certora/confs/CollSurplusPool_verified.conf --mutation_conf certora/confs/gambit/CollSurplusPool.conf`, so on the `CollSurplusPool` specifications.
+
+There are a total of 12 jobs ran, 10 of which are "2/2 Verified", 1 is "1/2 Verified" and 1 is "0/2 Verified". I've ran it several time, and I can always find one rule failing, with different parameters each time. Precisely the one I don't quite understand.
+
+This is this one, with the `changeToCollateralBalance` failing on `claimSurplusCollShares`. And here is the link to the UI: https://prover.certora.com/output/92857/4187c5ff1ce646b19ee77ea687629590/.
+
+The rule being verified is rather simple (screenshot 1). Check that the balance *after* the call is lower than *before* only when the caller is authorized or the `borrowerOperationsAddress`.
+
+In fact, if the caller is not the `borrowerOperationsAddress`, the call should never reach any point after the `_requireCallerIsBorrowerOperations();` check in the `claimSurplusCollShares` function from the `CollSurplusPool` contract. The thing is, from how it is presented in the Prover UI, that it seems to happen anyway.
+
+The broken rule demonstrates that the balance before is `1` and after is `0`, when in fact the caller is neither authorized or the `borrowerOperationsAddress` (screenshot 2). And we can see from the call trace that the call goes right through the check and performs the operations, although the caller is not at all that restricted address (screenshot 3 & 4).
+
+Basically, the `_requireCallerIsBorrowerOperations()` precondition seems to be completely bypassed. I just don't understand how this can happen.
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-5F149.png
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-44E8B.png
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-458B2.png
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/image-0EB23.png
+
+
+[11/08/2023 17:20] 0xpolarzero
+My intuition tells me that it might actually be a mutation, on which maybe the check was removed. But in this case, is there any way on the UI to see how the contract was modified?
+
+
+[11/08/2023 17:20] 0xpolarzero
+Please let me know if this is not the place to discuss this, and I'll move the discussion to the Certora Discord
+
+
+[11/08/2023 17:32] alextheentreprenerd
+@Armen | Certora please advise
+
+{Reactions}
+👀 ❤️ 
+
+[11/08/2023 17:36] teryanarmen
+You are running the mutation testing and not just the spec. This will inject bugs and send them off with the same spec to see what bugs will be caught. This is how we determine coverage (we use different mutations, mostly high sometimes medium severity and not caught by any spec in the repo now). Does this clarify things? You can dm me also or reach out in the certora help-desk if I am not available.
+
+{Reactions}
+❤️ 
+
+[11/08/2023 18:18] 0xpolarzero
+Ok got it! Thanks for the clarification. So I can't know for each job what these injected bugs are actually, right?
+
+
+[11/08/2023 18:51] 7a4raf
+the only public mutations are the ones in the mutations folder, but for coverage, the injected mutation are private and I think they will not get released until the resuls are out
+
+
+[11/08/2023 18:54] teryanarmen
+You can if you run certoraMutate, you will get something like [this](https://mutation-testing.certora.com/?id=e88e640b-cb0c-4ea9-85ca-a5c6db926bee&anonymousKey=4bb274d5-442c-4fd3-ac46-441532a2f9f2) where it shows some random mutants generated by gambit along with any manual ones as specified in the gambit conf found in certora/confs/gambit/*.conf. And yes the private mutations are not in the contracts or in the repo, they will be used to evaluate the results and shared with the rewards.
+
+
+[11/08/2023 19:32] 0xpolarzero
+Oh ok thanks, that's interesting. And yes, got it about the private mutations. That's exciting!
+
+
+[11/08/2023 19:32] 0xpolarzero
+Thanks for the details again
+
+
+[11/09/2023 08:13] irving6969
+@Alex The Entreprenerd @dapp_whisperer pls check the thread
+
+{Reactions}
+👍 (2) 
+
+[11/10/2023 09:25] yanchuan1
+@Alex The Entreprenerd What's the meaning of Cdp.stake, and what's the difference between Cdp.stake and Cdp.coll?
+
+
+[11/10/2023 09:27] alextheentreprenerd
+Stake is used for redistribution, while coll is the actual shares balance
+
+I think in most cases they match but they may have different values at times (during a redistribution)
+
+
+[11/10/2023 09:29] yanchuan1
+@Alex The Entreprenerd Is there a test case in the codebase?
+
+
+[11/10/2023 09:30] alextheentreprenerd
+There's a ton + invariants
+
+
+[11/10/2023 09:32] yanchuan1
+I mean test case about redistribution and Cdp.stake.
+
+
+[11/10/2023 09:42] alextheentreprenerd
+There are some invariants and then a bunch of tests
+
+
+[11/10/2023 17:15] invitedtea
+Hi Alex @Alex The Entreprenerd and @dapp_whisperer , thank you for your sponsor, I am excited to learn this protocol. One small question is that we dont expect people do analysis report this time? If someone had asked this question, please let me know the answer. thank you
+
+
+[11/10/2023 17:19] alextheentreprenerd
+I suggested not to have Analyses as we're planning on launching the primitive
+
+{Reactions}
+👍 
+
+[11/11/2023 05:50] invitedtea
+@Armen | Certora , Hi Armen, I just filled the form, and plan to work on FV component in the weekend. Hope I can get access to the key. Thank you
+
+
+[11/11/2023 08:57] jvorex
+Give it a couple hours. It’ll arrive in your email
+
+
+[11/11/2023 17:18] etherhood
+is there a link to certora discord, the invite link in their docs is expired
+
+
+[11/11/2023 17:25] etherhood
+@Armen | Certora Sent you a DM regarding some doubt in CVL
+
+
+[11/11/2023 17:38] kirkeelee
+https://discord.com/invite/certora
+
+{Reactions}
+🙏 (2) 
+
+[11/12/2023 13:20] peritoflores
+Hi, do u know which variable is accounting number?  I am trying to understand this invariant " The collateral balance in the collSurplus pool is greater than or equal to its accounting number '"
+
+
+[11/12/2023 17:36] alextheentreprenerd
+This is the accounting number: https://github.com/code-423n4/2023-10-badger/blob/f2f2e2cf9965a1020661d179af46cb49e993cb7e/packages/contracts/contracts/CollSurplusPool.sol#L28C22-L28C44
+
+
+[11/13/2023 08:38] nonseodion
+Please check, sent a friend request.
+
+
+[11/13/2023 10:03] teryanarmen
+Hey guys, I know its late but you can find examples of using quantifiers in a singly and doubly linked lists: https://github.com/Certora/Examples/tree/master/CVLByExample/QuantifierExamples
+
+{Reactions}
+🙏 
+
+[11/13/2023 10:05] teryanarmen
+You can also find some other examples on Safe's contracts
+https://github.com/safe-global/safe-contracts/blob/main/certora/specs/ModuleReach.spec
+https://github.com/safe-global/safe-contracts/blob/main/certora/specs/OwnerReach.spec
+
+
+[11/13/2023 10:08] teryanarmen
+Another example but without quantifiers (may be more incomplete)
+https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/certora/specs/libraries/StructuredLinkedList.spec
+
+
+[11/13/2023 10:20] 7a4raf
+@Alex The Entreprenerd hey, if the protocol does not charge fees on ebtc borrowing, what is the incentive for the creators ?
+
+
+[11/13/2023 10:52] codingnamekiki
+The protocol takes a certain percent of the earned yield from Lido.
+
+{Reactions}
+👌 
+
+[11/13/2023 10:53] alextheentreprenerd
+PYS
+
+{Reactions}
+👌 
+
+[11/13/2023 10:53] alextheentreprenerd
+Send the question if you have one
+
+
+[11/13/2023 13:42] alextheentreprenerd
+@dapp_whisperer
+
+
+[11/13/2023 13:58] dapp_whisperer
+it's a good question - I can't answer that definitely off the top of my head. would have to go through the state machine to confirm.
+
+
+[11/13/2023 14:08] codingnamekiki
+- The system goes into usingFallbackChainlinkUntrusted, next time fetchPrice is called and the fallback is either broken or frozen then the system will return the lastGoodPrice which will be the last chainlink price.
+
+- The system goes into usingFallbackChainlinkUntrusted, next time fetchPrice is called and the fallback is neither broken or frozen then the system will both return the fallback response and store it as the new value of lastGoodPrice.
+
+when status is usingFallbackChainlinkUntrusted, lastGoodPrice can be both the chainlink price and the fallback price, depending on the situation, hopefully thats more understandable.
+
+
+[11/13/2023 16:42] nonseodion
+Created a  private thread for it. Please do respond there.
+
+
+[11/13/2023 21:39] benrai
+@Alex The Entreprenerd Dmed you, hope you find time to get back to me about my questions 🙂
+
+
+[11/14/2023 15:41] debofx
+Sent you a private thread @dapp_whisperer
+
+
+[11/14/2023 16:19] benrai
+@kartoonjoy | C4 🎇🎇 I did the contest in a team. How can I ensure that the rewards for the FV part go to the team and not to me individually since we only submit one repo that is in my name?
+
+
+[11/14/2023 16:32] acegawd
+Who's available @dapp_whisperer or @Alex The Entreprenerd ?
+
+
+[11/14/2023 16:39] dapp_whisperer
+We’re both available, but a bit slower to reply due to conference activities
+
+
+[11/14/2023 16:39] dapp_whisperer
+What are you curious about?
+
+
+[11/14/2023 16:51] acegawd
+I dmed you @dapp_whisperer
+
+
+[11/14/2023 17:22] debofx
+@dapp_whisperer @Alex The Entreprenerd   Hi, Does the following mean there is reentrancy or no reentrancy? 
+```::fallback{value: 1000000000000000000}() 
+    │   └─ ← "EvmError: Revert"
+    └─ ← ()
+
+Test result: ok. 1 passed; 0 failed; finished in 8.52ms```
+
+
+[11/14/2023 19:23] jvorex
+@kartoonjoy | C4 🎇🎇 co-ask. My team did the contest using the teams GitHub repo which is the name of the team on C4. I suppose that’s enough?
+
+
+[11/14/2023 19:41] itsmetechjay
+did you put your team name into the submission?
+
+
+[11/14/2023 19:42] itsmetechjay
+actually @Armen | Certora do you have any guidance here for these team submissions?
+
+
+[11/14/2023 20:01] codingnamekiki
+https://tenor.com/view/badger-badger-badger-mushroom-mushroom-mushroom-iggydr-gif-18197905
+
+{Embed}
+https://tenor.com/view/badger-badger-badger-mushroom-mushroom-mushroom-iggydr-gif-18197905
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/badger-badger-badger-62B32.png
+
+{Reactions}
+👍 
+
+[11/14/2023 20:01] hunter_w3b
+https://tenor.com/view/the-simpsons-homer-simpson-the-end-is-near-apocalypse-gif-7204975
+
+{Embed}
+https://tenor.com/view/the-simpsons-homer-simpson-the-end-is-near-apocalypse-gif-7204975
+The End Is Near
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/the-simpsons-homer-simpson-C9061.png
+
+
+[11/14/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **$135,225 USDC Badger eBTC Audit + Certora Formal Verification** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+🎉 (3) C4Keycap (2) 💯 hi5 🚀 (2) 
+
+[11/14/2023 20:13] benrai
+No, I did not
+
+{Reactions}
+👍 
+
+[11/14/2023 21:58] irving6969
+thank you @dapp_whisperer  & @Alex The Entreprenerd for answering my dumb questions . I learnt a lot from this protocol .
+
+
+[11/14/2023 22:38] lsaudit
+how many submissions?
+
+
+[11/14/2023 22:59] benrai
+304 submissions
+
+{Reactions}
+thankyou (5) 🙂 
+
+[11/14/2023 23:25] lsaudit
+wow, that's low! Including gas/analysis?
+
+
+[11/15/2023 06:06] collinsoden
+This protocol was my first on this platform, the docs and videos made it easy for me to navigate through this. Thank you @Alex The Entreprenerd for your kind response to my questions.
+
+
+[11/15/2023 07:01] codingnamekiki
+210 issues without gas and low.
+
+
+[11/15/2023 15:38] alextheentreprenerd
+Trying to get a gauge of participation, can you DM me the amount of days / hours you reviewed the code?
+It would help to hear that whether you sent something or not
+
+
+[11/15/2023 15:40] ladboy233
+This codebaes has been reviewed by some of the best auditor in the security space
+
+
+[11/15/2023 15:40] ladboy233
+trust security, bert, hyh, least wood, so either few people split the 130K or it will be distributed by the QA curve hh
+
+
+[11/15/2023 15:42] ladboy233
+still not sure how the participation pool and beginner pool will be distributed
+
+
+[11/15/2023 15:42] ladboy233
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/Screenshot_2023-11-15_at_10.42.28_AM-5B2F1.png
+
+
+[11/15/2023 15:43] 0xvj
+For the beginner pool the scope is only EBTC token that's it
+
+{Reactions}
+😂 
+
+[11/16/2023 02:48] junnon.
+Isnt it for formal verification?
+
+{Reactions}
+👍 
+
+[11/16/2023 10:02] teryanarmen
+Hi everyone, if you shared a repo for the fv submission and it has not been accepted or expired please resend the invitation
+
+
+[11/17/2023 09:37] alextheentreprenerd
+Please DM me the amount of days / hours you worked if you have!
+
+
+[11/17/2023 14:18] benrai
+Is this a call to everyone who participated or to someone in particular?
+
+
+[11/17/2023 14:19] alextheentreprenerd
+Everyone who participated
+
+
+[11/17/2023 17:59] shaka0x
+FR sent
+
+
+[11/17/2023 19:31] .akira0327
+FR sent, too
+
+
+[11/18/2023 12:24] 0xarion
+How i can check that ?
+
+
+[11/18/2023 12:27] teryanarmen
+I have access to your work but I think you can check by going to /settings/access
+
+{Reactions}
+🫡 
+
+[12/05/2023 17:15] 7a4raf
+Will fv results be released before audit results? @Armen | Certora
+
+
+[12/05/2023 17:23] teryanarmen
+For the real bug catching properties we depend on the audit judging so most likely not
+
+
+[12/05/2023 17:24] 7a4raf
+What about the rest?
+Coverage and participation pools
+
+
+[12/05/2023 17:27] teryanarmen
+Still being worked on
+
+{Reactions}
+👌 
+
+[12/11/2023 11:29] ragna5059
+results coming out today? 👀
+
+{Reactions}
+gummy_wink (2) 🕵️‍♂️ (2) 
+
+[12/12/2023 15:53] 7a4raf
+https://tenor.com/view/bender-hope-fry-futurama-theres-hope-gif-14809947
+
+{Embed}
+https://tenor.com/view/bender-hope-fry-futurama-theres-hope-gif-14809947
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/bender-hope-8A614.png
+
+
+[12/12/2023 19:52] thebrittfactor
+🤑 🎉  Awards for **Badger eBTC**:
+
+$28,862.18 USDC » @Stormy
+$15,736.55 USDC » @0xBeirao
+$15,736.55 USDC » TrungOre
+$8,768.05 USDC » @ether_sky
+$7,146.08 USDC » @shaka
+$6,406.81 USDC » @0xRobocop
+$4,658.25 USDC » SpicyMeatball
+$4,217.14 USDC » @rvierdiiev
+$3,243.95 USDC » @Nyx
+$2,964.08 USDC » @nobody2018
+$2,189.67 USDC » BARW (@BenRai and @albertwhite)
+$810.99 USDC » @Weed0607
+$211.59 USDC » DavidGiladi 
+$182.48 USDC » @hihen 
+$182.48 USDC » @hunter_w3b 
+$162.76 USDC » @oualidpro 
+$162.76 USDC » @codeslide 
+$162.76 USDC » @Madalad 
+$162.76 USDC » @Sathish9098 
+$162.76 USDC » @JCK 
+$162.76 USDC » @unique 
+$162.76 USDC » @zabihullahazadzoi 
+$162.76 USDC » @cheatc0d3 
+$138.53 USDC » @lsaudit 
+$117.51 USDC » @jasonxiale 
+$117.51 USDC » @wangxx2026 
+$117.51 USDC » @OMEN 
+$117.51 USDC » @LokiThe5th 
+$117.51 USDC » @Jaraxxus775 
+$117.51 USDC » @0xladboy | Sparkware 
+$117.51 USDC » @ge6a 
+$117.51 USDC » @prapandey031 
+$117.51 USDC » alpha
+
+
+[12/12/2023 19:52] thebrittfactor
+$40.73 USDC » nonseodion 
+$21.02 USDC » @Collinsoden 
+$21.02 USDC » @James 
+$21.02 USDC » @SAQ 
+$21.02 USDC » @mgf15 
+$21.02 USDC » @john80 
+$21.02 USDC » @sivanesh_808 
+$21.02 USDC » @petrichor🦖 
+$21.02 USDC » ybansal2403 
+$21.02 USDC » 0xta 
+$21.02 USDC » 0xhex 
+$21.02 USDC » SY_S 
+$19.71 USDC » @bdmcbri 
+$19.71 USDC » @niroh 
+$19.71 USDC » @twcctop 
+$19.71 USDC » @7ashraf 
+$19.71 USDC » @twicek
+$19.71 USDC » fatherOfBlocks 
+$19.71 USDC » alexzoid 
+
+🏁 Findings summary
+-----------------------------------
+High risk findings: 1 unique (2 total)
+Med risk findings: 6 unique (14 total)
+Gas reports: 24 (Best: DavidGiladi)
+QA reports: 26 (Best: SpicyMeatball)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+code4rena (8) 🎉 (4) 
+
+[12/12/2023 19:57] thebrittfactor
+**Please note - the formal verification awards for this audit are still pending.**
+
+
+[12/12/2023 20:28] t1moh
+Congrats @0xBeirao !
+
+{Reactions}
+❤️ 👏 (3) 
+
+[12/12/2023 20:28] beirao
+Thx @T1MOH ❤️
+
+
+[12/12/2023 20:49] irving6969
+Im on list let’s go
+
+
+[12/13/2023 05:26] irving6969
+@thebrittfactor | C4 hi when u send awards , can u give me some gas fee for polygon, (deduct it from my awards ) is it possible? , im stuck with usdc ,
+
+
+[12/13/2023 05:55] lourenslinde
+I got you. Feel free to DM your rewards address if you want.
+
+Alternatively gasbot.xyz is  great to get gas into another chain.
+
+{Reactions}
+10_10 
+
+[12/13/2023 06:03] irving6969
+thank you , i swap it with gas bot u mentioned .  thanks a lot
+
+{Reactions}
+🍻 
+
+[12/13/2023 06:37] saaj_110
+u can use swap for gas on polygon bridge on uniswap...it will deduct your usdc with matic
+
+{Reactions}
+10_10 chefskiss 
+
+[12/13/2023 06:43] irving6969
+i was too dumb 😂  although i am trying to be security researcher , i don't even know those things exist 😂 🤣 , i got it with gas bot , thanks anyway
+
+
+[12/13/2023 13:49] 7a4raf
+are rewards distributed yet?
+
+
+[12/13/2023 13:56] saaj_110
+next time just try polygon swap as it is free and if want to bridge token to other chain use hop exchange as they are cost efficient..gas bot still is expensive
+
+{Reactions}
+10_10 
+
+[12/13/2023 15:14] thebrittfactor
+You're good on this, right? Otherwise, please submit a help desk request and I'll try to get the correct people involved 🙂
+
+
+[12/13/2023 18:22] irving6969
+yea im good now
+
+{Reactions}
+🙌 thankyou 
+
+[12/13/2023 18:35] irving6969
+thank you for sharing sir
+
+
+[12/24/2023 01:32] teryanarmen
+Hi @here the preliminary coverage results for eBTC contest can be found [here](https://docs.google.com/spreadsheets/d/1WOg6TTT8D18ft_UV_nMSXEBbqVp7WW3alvYKx9ozS7M/edit#gid=1970712821). Please check the mutations [here](https://github.com/teryanarmen/2023-10-badger/tree/main/certora/mutations) and dm me any corrections. Thank you for your participation!
+
+
+[12/24/2023 15:18] teryanarmen
+Please inform me of any corrections within 96 hours. Thanks again and happy holidays!
+
+
+[12/28/2023 12:53] nonseodion
+Have eBTC rewards been sent out? Just saw that this announcement includes BTC but I haven't received any reward.
+https://discord.com/channels/810916927919620096/810929015509483554/1186836321688358912
+
+
+[12/29/2023 17:58] 7a4raf
+if you mean the normal audit competition, yes the rewards are out and sent
+-check for a transaction on https://polygonscan.com/ using your wallet address
+-if you found a transaction, try importing USDC coin inside your wallet on the Polygon network
+-if you can't find a transaction try opening a help-desk request 
+if you mean the formal verification competition, the results are not out yet, only preliminary results are out
+
+{Embed}
+https://polygonscan.com/
+Polygon PoS Chain (MATIC) Blockchain Explorer
+PolygonScan allows you to explore and search the Polygon blockchain for transactions, addresses, tokens, prices and other activities taking place on Polygon (MATIC)
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/og-F4B45.jpg
+
+
+[12/31/2023 11:16] nonseodion
+Thanks
+
+{Reactions}
+👌 
+
+[01/03/2024 15:30] 7a4raf
+https://tenor.com/view/joseph-quinn-dickensian-arthur-havisham-we-must-do-it-today-do-it-today-gif-26360713
+
+{Embed}
+https://tenor.com/view/joseph-quinn-dickensian-arthur-havisham-we-must-do-it-today-do-it-today-gif-26360713
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/joseph-quinn-dickensian-D444E.png
+
+
+[01/04/2024 18:24] 7a4raf
+https://tenor.com/view/when-zac-sistas-s4e21-at-what-date-gif-26443318
+
+{Embed}
+https://tenor.com/view/when-zac-sistas-s4e21-at-what-date-gif-26443318
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/when-zac-A0C94.png
+
+
+[01/05/2024 20:22] liveactionllamac4
+:C4Keycap: 💸 🎉 Awards for **Badger eBTC Formal Verification Competition with Certora**:
+
+$6,865.77 USDC » BARW (@BenRai & @albertwhite) 
+$4,853.08 USDC » @alexzoid 
+$2,822.00 USDC » @Junnon 
+$1,503.08 USDC » @capriza 
+$1,223.68 USDC » @0x00ffDa 
+$1,175.20 USDC » @twicek 
+$1,069.28 USDC » @degensec.eth 
+$972.49 USDC » @Bolby 
+$895.26 USDC » @neumo 
+$815.34 USDC » @Vijay 
+$796.91 USDC » @dirtymic 
+$764.39 USDC » @naszam 
+$629.91 USDC » @bharg4v 
+$430.90 USDC » @etherhood 
+$357.70 USDC » vittdav
+$343.73 USDC » @BAHOZ 
+$314.63 USDC » @polarzero 
+$312.94 USDC » jessicapointing
+$305.59 USDC » @peritoflores 
+$300.85 USDC » @Arion 
+$299.47 USDC » @imare 
+$299.04 USDC » @Nikki 
+$271.90 USDC » @0xlemon 
+$234.67 USDC » @nican0r 
+$223.76 USDC » @vipe0x 
+$223.76 USDC » @desaperh 
+$179.03 USDC » @7ashraf 
+$155.21 USDC » @zapaz 
+$123.80 USDC » @PPrieditis 
+$115.16 USDC » @brgltd 
+$107.93 USDC » @VicenteM 
+$103.01 USDC » @Kento 
+$103.01 USDC » @linuslandin 
+$101.40 USDC » @deadbee 
+$101.40 USDC » @Saul 
+$101.40 USDC » @chrollophantom 
+$98.77 USDC » @sashik_eth 
+$96.27 USDC » DarkTower (@Gelato_ST, @Kenzo, @0xrex, and @Maroutis)
+$81.49 USDC » @yojeff 
+$66.77 USDC » @Testerbot 
+$65.97 USDC » @invitedtea 
+$62.23 USDC » @kirkeelee 
+$19.60 USDC » @3DOC 
+$12.22 USDC » @yjrwkk 
+
+Awards will be distributed on Polygon within the next week. Congratulations all! 💸 💸 💸
+
+*Please note: these are the results for the formal verification portion of the competition. The results for the normal audit were announced above, [here](https://discord.com/channels/810916927919620096/1164938191942459473/1184221291780251678).*
+
+{Reactions}
+🔥 (9) 
+
+[01/07/2024 03:18] teryanarmen
+Coverage data: https://docs.google.com/spreadsheets/d/1NLfQKMcUDQfeH4AGwdYPg2JTONzNT2pd75S7kwIJizU/edit#gid=1970712821
+
+{Embed}
+https://docs.google.com/spreadsheets/d/1NLfQKMcUDQfeH4AGwdYPg2JTONzNT2pd75S7kwIJizU/edit
+eBTC Results
+Rewards
+
+Participant,Rewards,Bug ID →,Original_Original,ActivePool_3.sol,ActivePool_2.sol,ActivePool_0.sol,ActivePool_P.sol,ActivePool_1.sol,ActivePool_5.sol,ActivePool_4.sol,ActivePool_6.sol,ActivePool_7.sol,ActivePool_9.sol,ActivePool_8.sol,ActivePool_10.sol,CollSurplusPool_8.sol,CollSurplusPoo...
+Code4rena - ARCHIVE-Q4-2023 - badgerebtc-oct24 [1164938191942459473].txt_Files/AHkbwyJlUqW2VM1dkhHTRTgAa6foU4ro0TkV2UTNku-DDC6E
+
+
+[01/07/2024 03:18] teryanarmen
+Congrats to @BenRai for writing the only rule for a real bug 🎉
+
+
+[01/07/2024 05:11] benrai
+Thank you! 😊
+
+{Reactions}
+🏆 (6) 👍 (3) cheers_badger 
+
+[01/12/2024 21:17] benrai
+@🦙 liveactionllama | C4 I send you a dm, did you see it?
+
+
+[01/12/2024 23:46] liveactionllamac4
+Hi! It gets pretty difficult to monitor all incoming DMs in a big community like this, especially since they often end up outside of my main inbox. 😅 If you have a question or concern, it is typically best to submit a [help request](https://code4rena.com/help) so that our team can review and respond! 🙂
+
+
+[01/13/2024 05:22] benrai
+Good to know, I will do so, thanks 😊
+
+{Reactions}
+hi5 thankyou 
+
+[02/24/2024 02:46] itsmetechjay
+ℹ️ This channel is pending archive.  As a result, any private threads will be permanently deleted on Saturday, 02 March 2024. Please make sure to grab anything you might need from those before then.
+
+
+==============================================================
+Exported 276 message(s)
+==============================================================
